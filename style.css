@@ -1,19 +1,39 @@
+@font-face {
+      font-family: 'Arial-regular';
+      src: url('font_text/Arial-regular.ttf');
+}
+@font-face {
+      font-family: 'ProximaNova-Bold';
+      src: url('font_text/ProximaNova-Bold.otf');
+}
+@font-face {
+      font-family: 'ProximaNova-Light';
+      src: url('font_text/ProximaNova-Light.ttf');
+}
+@font-face {
+      font-family: 'ProximaNova-Regular';
+      src: url('font_text/ProximaNova-Regular.ttf');
+}
+@font-face {
+      font-family: 'ProximaNova-Semibold';
+      src: url('font_text/ProximaNova-Semibold.ttf');
+}
 body{
   background: #9e9e9e;
 }
 *{
-    font-family: sans-serif;
+    font-family: 'ProximaNova-Bold';
 }
 
 
 /*css page heading start*/
 .s_brand_name {
-    font-family: sans-serif;
+    font-family: 'ProximaNova-Bold';
     text-align: left;
     padding-bottom: 17%;
     font-size: 80px;
     padding-left: 30px;
-    line-height: 80px;
+    line-height: 35px;
 }
 .s_logo_image {
     text-align: right;
@@ -29,10 +49,10 @@ body{
 }
 h1.f_brand_name {
     padding-top: 20%;
-    font-family: sans-serif;
+    font-family: 'ProximaNova-Light';
     text-align: left;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 80px;
     padding-left: 30px;
 }
@@ -48,7 +68,7 @@ h1.f_brand_name {
   position: relative;
 }
 .p1_brand_name {
-    font-family: sans-serif;
+    font-family: 'ProximaNova-Bold';
     text-align: center;
     padding-top: 30%;
     margin-bottom: 20px;
@@ -195,6 +215,9 @@ p.numeric_letter {
     text-align: center;
     padding-top: 134px;
 }
+.p9_color_codes b{
+  color: #767678;
+}
 .p9_color_codes {
     border: 2px solid rgb(245, 245, 245);
     margin-top: -23px;
@@ -222,8 +245,9 @@ p.numeric_letter {
 }
 
 .p9_content p {
+    font-family: 'ProximaNova-Regular';
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     margin: 9px 0;
 }
 /*css page 9 end*/
@@ -259,10 +283,14 @@ p.numeric_letter {
   justify-content: center;
   align-items: center;
 }
-.p11_logo_div_image {
+.p11_logo_img {
     text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
-.p11_logo_div_image img {
+.p11_cover_silder_logo img {
     max-height: 75px;
     max-width: 104px;
     display: flex;
@@ -271,6 +299,7 @@ p.numeric_letter {
     align-items: center;
 }
 .p11_box_title {
+    font-family: 'ProximaNova-Light';
     position: absolute;
     left: 0;
     right: 0;
@@ -294,6 +323,7 @@ p.numeric_letter {
     margin: 0;
 }
 .p11_background_subtitle {
+    font-family: 'ProximaNova-Light';
     text-align: center;
     font-size: 12px;
     margin: 8px;
@@ -389,10 +419,7 @@ p.numeric_letter {
     width: 100%;
 }
 .logo_body {
-    width: 124px;
     height: 77px;
-    position: absolute;
-    bottom: 4px;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -438,6 +465,12 @@ img.logo_footer {
     align-items: center;
     left: 14px;
 }
+.p14_image_absolute{
+   position: absolute;
+   bottom: 4px;
+   width: 124px;
+   height: 77px;
+}
 /*css page 14 end*/
 
 
@@ -454,6 +487,12 @@ img.logo_footer {
 }
 .p16_profile_image {
     float: left;
+    width: 120px;
+    height: 108px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     padding-right: 20px;
 }
 .p16_profile_text {
@@ -465,26 +504,33 @@ img.logo_footer {
     margin: 0;
 }
 .p16_profile_text .p16_email {
+    font-family: 'ProximaNova-Regular';
     margin: 0px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
 }
 .p16_profile_text .p16_contact {
+    font-family: 'ProximaNova-Regular';
     margin: 6px 0;
     font-size: 15px;
 }
 .p16_profile_text .p16_address{
+    font-family: 'ProximaNova-Regular';
     margin: 6px 0;
     font-size: 15px;
 }
 .p16_profile_text .p16_subaddress{
+    font-family: 'ProximaNova-Regular';
     margin: 6px 0;
     font-size: 15px;
 }
 .p16_profile_image img {
     max-width: 94px;
-    padding-top: 30px;
     max-height: 68px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 .p16_border_bottom {
     float: left;
@@ -505,11 +551,12 @@ img.logo_footer {
     padding: 0px 25px;
 }
 .p16_detail_text p {
-    font-size: 11px;
+    font-family: 'ProximaNova-Regular';
+    font-size: 12px;
     font-weight: 600;
 }
 .p16_detail_text_bottom p {
-    font-size: 14px;
+    font-size: 15px;
 }
 .p16_detail_text_bottom {
     position: absolute;
@@ -796,6 +843,7 @@ img.logo_footer {
 }
 .page_detail_brand_identity p {
     position: absolute;
+    font-family: 'ProximaNova-Bold';
     bottom: 0;
     right: 0;
     font-weight: 600;
@@ -825,15 +873,17 @@ img.logo_footer {
     margin-top: 50px;
 }
 .page_detail_presentation_design {
+    font-family: 'ProximaNova-Bold';
     padding-left: 40px;
-    font-size: 37px;
+    font-size: 36px;
     font-weight: 600;
     padding-top: 20px;
 }
 .page_detail_presentation_design_detail {
+    font-family: 'ProximaNova-Regular';
     padding-left: 40px;
     padding-right: 70px;
-    font-size: 15px;
+    font-size: 14px;
     padding-top: 45px;
 }
 
