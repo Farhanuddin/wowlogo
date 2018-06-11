@@ -8,7 +8,7 @@
 
           //Primary
           $primary_bg_color = $_POST['primary_bg_color'];
-          $primary_fg_color = $_POST['primary_fg_color']; 
+          $primary_fg_color = $_POST['primary_fg_color'];
 
           $primary_logo_file = $_FILES['primary_logo']['tmp_name'];
 
@@ -16,11 +16,11 @@
 
           $primary_logo_white = uploadFile($_FILES['primary_logo_white'], 'image/bg-logo/');
 
-          $primary_logo_tag = uploadFile($_FILES['primary_logo_tag'], 'image/bg-logo/');      
+          $primary_logo_tag = uploadFile($_FILES['primary_logo_tag'], 'image/bg-logo/');
           //copy logo folder file - logo_white
           //$primary_logo = uploadFile($_FILES['primary_logo'], 'image/bg-logo/');
           $logo_white = $primary_logo;
-          
+
           //copy('image/bg-logo/logo1.png', 'image/bg-logo/logo_white.png');
           //$logo_white = uploadFile($_FILES['primary_logo'], 'image/bg-logo/', 'logo_white.png');
 
@@ -28,9 +28,9 @@
           $secondary_bg_color = $_POST['secondary_bg_color'];
           $secondary_fg_color = $_POST['secondary_fg_color'];
           $secondary_logo_file = $_FILES['secondary_logo'];
-          
+
           $secondary_logo = uploadFile($_FILES['secondary_logo'], 'image/bg-logo/');
-          
+
           //Upload logo folder file - logo_black
           $logo_black = $secondary_logo;
           //copy('image/bg-logo/logo2.png', 'image/bg-logo/logo_black.png');
@@ -46,36 +46,36 @@
           $option2_fg_color = $_POST['option2_fg_color'];
           $option2_logo = uploadFile($_FILES['option2_logo'], 'image/bg-logo/');
 
-          //font 
+          //font
           $font_name = $_POST['font_name'];
           $font_light = uploadFile($_FILES['font_light'], 'fonts/');
           $font_bold = uploadFile($_FILES['font_bold'], 'fonts/');
           $font_regular = uploadFile($_FILES['font_regular'], 'fonts/');
 
           //insert into database
-          $sql = "INSERT INTO logos 
+          $sql = "INSERT INTO logos
           (primary_bg_color, primary_fg_color, primary_logo_file, primary_logo_white, primary_logo_tag ,
-          secondary_bg_color ,secondary_fg_color, secondary_logo, 
-          option1_bg_color, option1_fg_color,option1_logo, 
+          secondary_bg_color ,secondary_fg_color, secondary_logo,
+          option1_bg_color, option1_fg_color,option1_logo,
           option2_bg_color, option2_fg_color, option2_logo,
           font_name, font_light, font_bold, font_regular, logo_white, logo_black)
-          VALUES 
+          VALUES
           ('{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}', '{$primary_logo_white}', '{$primary_logo_tag}',
            '{$secondary_bg_color}', '{$secondary_fg_color}' ,'{$secondary_logo}',
-           '{$option1_bg_color}', '{$option1_fg_color}', '{$option1_logo}', 
+           '{$option1_bg_color}', '{$option1_fg_color}', '{$option1_logo}',
            '{$option2_bg_color}','{$option2_fg_color}','{$option2_logo}',
-           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}', '{$logo_white}', '{$logo_black}')";          
-        
+           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}', '{$logo_white}', '{$logo_black}')";
+
           if ($conn->query($sql) === TRUE) {
-              
+
               $last_id = $conn->insert_id;
-              
+
               $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
               $route .= '?id='.$last_id;
-       
+
 
                header('Location: '. $route);
-            
+
           } else {
               echo "Error: " . $sql . "<br>" . $conn->error;
           }
@@ -87,15 +87,15 @@
 
         if(isset($_GET['id'])) {
 
-        
+
           $logo_id = $_GET['id'];
           $sql = "SELECT * FROM logos where id='{$logo_id}'";
           $result = $conn->query($sql);
 
           if($result->num_rows > 0){
             //logo fetched
-              $logo_result = $result->fetch_assoc(); 
-         
+              $logo_result = $result->fetch_assoc();
+
           }else{
             //redirect to form.php
              echo 'Design Not Found';
@@ -105,7 +105,7 @@
         }else{
            //   $route = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
            // //   var_dump($route);
-           //  //  die();            
+           //  //  die();
            //   $route = str_replace("index.php","", $route.'/form.php');
            //   header('Location: '. $route);
         }
@@ -132,7 +132,7 @@
           src: url(<?php echo 'fonts/'.$logo_result['font_bold']; ?>);
     }
 
-    .primary-color{ 
+    .primary-color{
         background: <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>;
         border-color: <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>;;
         color: <?php echo isset($logo_result['primary_fg_color']) ? $logo_result['primary_fg_color'] : '#fff'; ?>;;
@@ -156,9 +156,9 @@
         color:<?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#f26522'; ?>;
       }
 
-    </style>    
+    </style>
   </head>
-  <body>    
+  <body>
 
     <!-- page 1 start -->
     <div class="page primary-color" id="page1">
@@ -451,7 +451,7 @@
         <div class="page_detail_nav">
           <div class="page_detail_nav_border secondary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
-            Corporate Colors
+            Corporate <br>Colors
           </div>
           <div class="primary-text-color page_detail_presentation_design_detail">
             Primary brand colors should be used in all occasions for Sharestates communications.
@@ -554,16 +554,16 @@
           <!-- Cover Silde -->
           <p class="p11_silder_heading primary-text-color">Cover Slide</p>
           <div class="p11_cover_silder">
-            <div class="p11_cover_silder_logo primary-color">
-              <div class="p11_logo_div_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
-              </div>
+            <div class="p11_cover_silder_logo p11_logo_img primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              <!-- <div class="p11_logo_div_image">
+              </div> -->
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
-            <div class="p11_cover_silder_logo secondary-color">
-              <div class="p11_logo_div_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
-              </div>
+            <div class="p11_cover_silder_logo p11_logo_img secondary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              <!-- <div class="p11_logo_div_image">
+              </div> -->
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
           </div>
@@ -720,8 +720,10 @@
           <div class="p14_cover_silder">
             <div class="p14_bg_body">
               <img src="image/ads/body.png" class="body_img" alt="">
-              <div class="logo_body">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_body" alt="">
+              <div class="p14_image_absolute">
+                <div class="logo_body">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_body" alt="">
+                </div>
               </div>
             </div>
             <div class="p14_bg_nav">
@@ -866,7 +868,7 @@
               <div class="p18_cover_silder p18_twitter">
                 <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
                 <div class="p18_twitter_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">  
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
                 </div>
                 <div class="p18_twitter_dp_logo primary-color">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
@@ -1066,7 +1068,7 @@
     <!-- page 23 end -->
 
 <script>
-  
+
 function convertHex(hex,opacity){
    hex = hex.replace('#','');
    r = parseInt(hex.substring(0,2), 16);
@@ -1086,17 +1088,17 @@ function hexToCMYK (hex) {
     hex = (hex.charAt(0)=="#") ? hex.substring(1,7) : hex;
 
     if (hex.length != 6) {
-     alert ('Invalid length of the input hex value!');   
-     return; 
+     alert ('Invalid length of the input hex value!');
+     return;
     }
     if (/[0-9a-f]{6}/i.test(hex) != true) {
      alert ('Invalid digits in the input hex value!');
-     return; 
+     return;
     }
 
-    var r = parseInt(hex.substring(0,2),16); 
-    var g = parseInt(hex.substring(2,4),16); 
-    var b = parseInt(hex.substring(4,6),16); 
+    var r = parseInt(hex.substring(0,2),16);
+    var g = parseInt(hex.substring(2,4),16);
+    var b = parseInt(hex.substring(4,6),16);
 
     // BLACK
     if (r==0 && g==0 && b==0) {
@@ -1119,8 +1121,8 @@ function hexToCMYK (hex) {
 
 
 $('h2').html(hexToCMYK('#A7D136'));
-$('h1').html(convertHex('#A7D136'));  
+$('h1').html(convertHex('#A7D136'));
 
-</script>    
+</script>
   </body>
 </html>
