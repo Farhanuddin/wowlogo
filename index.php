@@ -3,74 +3,19 @@
 <html>
 <?php
 
-      function convert2Rgb($colorhex){
-        $result = list($r, $g, $b) = sscanf($colorhex, "#%02x%02x%02x");
-        $result = implode(", ", $result);
-        return $result;
-      }
-
-      function hex2cmyk($hex) {
-           $color = str_replace('#','',$hex);
-            $var1 = array(
-               'r' => hexdec(substr($color,0,2)),
-               'g' => hexdec(substr($color,2,2)),
-               'b' => hexdec(substr($color,4,2)),
-            );
-
-            if (is_array($var1)) {
-               $r = $var1['r'];
-               $g = $var1['g'];
-               $b = $var1['b'];
-            } else {
-               $r = $var1;
-            }
-            $cyan = 255 - $r;
-            $magenta = 255 - $g;
-            $yellow = 255 - $b;
-            $black = min($cyan, $magenta, $yellow);
-            $cyan = @(($cyan    - $black) / (255 - $black));
-            $magenta = @(($magenta - $black) / (255 - $black));
-            $yellow = @(($yellow  - $black) / (255 - $black));
-
-          return $cyan.",".$magenta.",".$yellow.",".$black;
-        
-      }
-
-
-      function uploadFile($file, $path, $filename=null){
-        if(!empty($file))
-        {
-          $path = $path;
-          if(is_null($filename)){
-            $filename = uniqid().'-'.basename($file['name']);
-          }else{
-            $filename = $filename;
-          }
-          
-          $path = $path.$filename;
-
-          try{
-              if(move_uploaded_file($file['tmp_name'], $path)) {
-                  return $filename;
-              } else{
-                  //echo "There was an error uploading the file, please try againzz!".$filename.'<br>';
-              }
-      
-          }catch(\Exception $e){
-              //echo $e->getMessage();
-          }
-        }
-      }
-
       if($_SERVER["REQUEST_METHOD"] == "POST"){
 
           //Primary
           $primary_bg_color = $_POST['primary_bg_color'];
-          $primary_fg_color = $_POST['primary_fg_color'];
+          $primary_fg_color = $_POST['primary_fg_color']; 
+
           $primary_logo_file = $_FILES['primary_logo']['tmp_name'];
 
           $primary_logo = uploadFile($_FILES['primary_logo'], 'image/bg-logo/');
-          
+
+          $primary_logo_white = uploadFile($_FILES['primary_logo_white'], 'image/bg-logo/');
+
+          $primary_logo_tag = uploadFile($_FILES['primary_logo_tag'], 'image/bg-logo/');      
           //copy logo folder file - logo_white
           //$primary_logo = uploadFile($_FILES['primary_logo'], 'image/bg-logo/');
           $logo_white = $primary_logo;
@@ -108,13 +53,13 @@
 
           //insert into database
           $sql = "INSERT INTO logos 
-          (primary_bg_color, primary_fg_color, primary_logo_file, 
+          (primary_bg_color, primary_fg_color, primary_logo_file, primary_logo_white, primary_logo_tag ,
           secondary_bg_color ,secondary_fg_color, secondary_logo, 
           option1_bg_color, option1_fg_color,option1_logo, 
           option2_bg_color, option2_fg_color, option2_logo,
           font_name, font_light, font_bold, font_regular, logo_white, logo_black)
           VALUES 
-          ('{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}',
+          ('{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}', '{$primary_logo_white}', '{$primary_logo_tag}',
            '{$secondary_bg_color}', '{$secondary_fg_color}' ,'{$secondary_logo}',
            '{$option1_bg_color}', '{$option1_fg_color}', '{$option1_logo}', 
            '{$option2_bg_color}','{$option2_fg_color}','{$option2_logo}',
@@ -220,7 +165,7 @@
     <div class="page primary-color" id="page1">
       <h1 class="p1_brand_name">BRAND</h1>
       <div class="p1_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 1 end -->
@@ -230,7 +175,7 @@
       <h1 class="f_brand_name">01.</h1>
       <h1 class="s_brand_name">LOGO DESIGN</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 2 end -->
@@ -266,7 +211,7 @@
 
           <p class="p3_silder_heading primary-text-color p3_primary">Primary logo</p>
           <div class="p3_cover_silder_logo">
-             <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+             <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
           </div>
 
           <div class="p3_main_logo">
@@ -328,12 +273,12 @@
 
           <p class="p3_silder_heading primary-text-color p4_primary">Primary logo</p>
           <div class="p3_cover_silder_logo">
-             <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+             <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
           </div>
 
           <p class="p3_silder_heading primary-text-color p4_primary_end">Primary Logo With Tagline Included</p>
           <div class="p3_cover_silder_logo">
-             <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+             <img src="image/bg-logo/<?php echo $logo_result['primary_logo_tag'] ?>">
           </div>
 
         </div>
@@ -368,13 +313,13 @@
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 1</p>
               <div class="p5_cover_silder_logo primary-color">
-                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 2</p>
               <div class="p5_cover_silder_logo secondary-color">
-                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
           </div>
@@ -383,13 +328,13 @@
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 3</p>
               <div class="p5_cover_silder_logo option1-color">
-                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 4</p>
               <div class="p5_cover_silder_logo option2-color">
-                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
           </div>
@@ -404,7 +349,7 @@
       <h1 class="f_brand_name">02.</h1>
       <h1 class="s_brand_name">TYPOGRAPHY</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 6 end -->
@@ -444,7 +389,7 @@
              <!-- Cover Silde -->
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($font_name) ? $font_name : 'Default'; ?> Light</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Light</p>
                    <h3 class="f_letter" style="font-family: font_light !important;">A <span style="font-family: font_light !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -456,7 +401,7 @@
              <div style="clear:both"></div>
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($font_name) ? $font_name : 'Default'; ?> Regular</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Regular</p>
                    <h3 class="f_letter" style="font-family: font_regular !important;">A <span style="font-family: font_regular !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -468,7 +413,7 @@
              <div style="clear:both"></div>
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($font_name) ? $font_name : 'Default'; ?> Bold</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Bold</p>
                    <h3 class="f_letter" style="font-family: font_bold !important;">A <span style="font-family: font_bold !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -487,7 +432,7 @@
       <h1 class="f_brand_name">03.</h1>
       <h1 class="s_brand_name">COLOR</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 8 end -->
@@ -580,7 +525,7 @@
       <h1 class="f_brand_name">04.</h1>
       <h1 class="s_brand_name">PRESENTATION</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 10 end -->
@@ -612,13 +557,13 @@
           <div class="p11_cover_silder">
             <div class="p11_cover_silder_logo primary-color">
               <div class="p11_logo_div_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
             <div class="p11_cover_silder_logo secondary-color">
               <div class="p11_logo_div_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
@@ -629,14 +574,14 @@
           <div class="p11_cover_silder p11_margin_0">
             <div class="p11_cover_silder_logo primary-color">
               <div class="p11_logo_background_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
             </div>
             <div class="p11_cover_silder_logo secondary-color">
               <div class="p11_logo_background_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
@@ -645,7 +590,7 @@
           <div class="p11_cover_silder">
             <div class="p11_cover_silder_logo option1-color">
               <div class="p11_logo_background_image">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
@@ -694,7 +639,7 @@
             <div class="p12_cover_silder_logo">
               <div class="p12_sub_nav primary-color">
                 <div class="p12_logo_background_image">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
               <div class="p12_sub_body">
@@ -704,7 +649,7 @@
             <div class="p12_cover_silder_logo">
               <div class="p12_sub_nav secondary-color">
                 <div class="p12_logo_background_image">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
               <div class="p12_sub_body">
@@ -716,7 +661,7 @@
             <div class="p12_cover_silder_logo">
               <div class="p12_sub_nav option1-color">
                 <div class="p12_logo_background_image">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
               <div class="p12_sub_body">
@@ -745,7 +690,7 @@
       <h1 class="f_brand_name">05.</h1>
       <h1 class="s_brand_name">ADVERTISEMENTS</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 13 end -->
@@ -777,18 +722,18 @@
             <div class="p14_bg_body">
               <img src="image/ads/body.png" class="body_img" alt="">
               <div class="logo_body">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="logo_body" alt="">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_body" alt="">
               </div>
             </div>
             <div class="p14_bg_nav">
               <img src="image/ads/nav.png" class="nav_img" alt="">
               <div class="logo_nav">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>"  alt="">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>"  alt="">
               </div>
             </div>
             <div class="p14_bg_footer">
               <img src="image/ads/footer.png" class="footer_img" alt="">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="logo_footer" alt="">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_footer" alt="">
             </div>
           </div>
         </div>
@@ -801,7 +746,7 @@
       <h1 class="f_brand_name">06.</h1>
       <h1 class="s_brand_name">E-MAIL</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 15 end -->
@@ -877,7 +822,7 @@
       <h1 class="f_brand_name">07.</h1>
       <h1 class="s_brand_name">SOCIAL MEDIA</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 17 end -->
@@ -909,10 +854,10 @@
           <div class="p18_cover_silder p18_facebook">
             <img src="image/social-media/facebook.png" class="p18_facebook_bg" alt="">
             <div class="p18_facebook_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
             <div class="p18_facebook_cover_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
           </div>
 
@@ -922,10 +867,10 @@
               <div class="p18_cover_silder p18_twitter">
                 <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
                 <div class="p18_twitter_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">  
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">  
                 </div>
                 <div class="p18_twitter_dp_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
                 </div>
               </div>
             </div>
@@ -934,7 +879,7 @@
               <div class="p18_cover_silder p18_instagram">
                 <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
                 <div class="p18_instagram_logo primary-color">
-                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
             </div>
@@ -950,7 +895,7 @@
       <h1 class="f_brand_name">08.</h1>
       <h1 class="s_brand_name">STATIONARY</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 19 end -->
@@ -983,7 +928,7 @@
             <div class="p20_left">
               <img src="image/stationary/card.png" class="card_img" alt="">
               <div class="p20_card_logo primary-color">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
           </div>
@@ -992,7 +937,7 @@
           <div class="p20_cover_silder envelope">
             <img src="image/stationary/envelope.png" class="envelope_img" alt="">
             <div class="p20_envelope_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
             </div>
           </div>
 
@@ -1027,7 +972,7 @@
           <div class="p21_cover_silder letter">
             <img src="image/stationary/letterhead.png" class="letter_img" alt="">
             <div class="p21_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
             </div>
           </div>
         </div>
@@ -1040,7 +985,7 @@
       <h1 class="f_brand_name">09.</h1>
       <h1 class="s_brand_name">MERCHANDISING</h1>
       <div class="s_logo_image">
-        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+        <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
       </div>
     </div>
     <!-- page 22 end -->
@@ -1079,7 +1024,7 @@
               <div class="p23_s_cover_silder vehicle">
                 <img src="image/merchandise/vehicle.png" class="vehicle_img" alt="">
                 <div class="vehicle_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
                 </div>
               </div>
             </div>
@@ -1087,7 +1032,7 @@
               <div class="p23_s_cover_silder mug">
                 <img src="image/merchandise/mug.png" class="mug_img" alt="">
                 <div class="mug_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
                 </div>
               </div>
             </div>
@@ -1103,7 +1048,7 @@
               <div class="p23_s_cover_silder tshirt">
                 <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
                 <div class="tshirt_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
             </div>
@@ -1111,7 +1056,7 @@
               <div class="p23_s_cover_silder cap">
                 <img src="image/merchandise/cap.png" class="cap_img" alt="">
                 <div class="cap_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
                 </div>
               </div>
             </div>
