@@ -602,6 +602,8 @@ img.logo_footer {
     max-height: 350px;
 }
 .p18_facebook_logo {
+    background: #fff !important;
+    border-color: #fff !important;
     position: absolute;
     top: 17%;
     left: 13%;
@@ -664,6 +666,7 @@ img.logo_footer {
     align-items: center;
 }
 .p18_twitter_dp_logo {
+    background: #fff !important;
     border: 1px solid #fff !important;
     position: absolute;
     width: 40px;
@@ -686,6 +689,7 @@ img.logo_footer {
     align-items: center;
 }
 .p18_instagram_logo {
+    background: #fff !important;
     position: absolute;
     width: 40px;
     height: 40px;
@@ -731,6 +735,7 @@ img.logo_footer {
     width: auto;
 }
 .p20_card_logo {
+    background: transparent !important;
     position: absolute;
     height: 70px;
     width: 70px;
@@ -744,10 +749,11 @@ img.logo_footer {
     align-items: center;
 }
 .p20_card_logo img {
-    max-width: 44px;
-    max-height: 32px;
+    max-width: 69px;
+    max-height: 50px;
 }
 .p20_envelope_logo {
+    background: transparent !important;
     position: absolute;
     height: 100px;
     width: 100px;
@@ -761,8 +767,8 @@ img.logo_footer {
     align-items: center;
 }
 .p20_envelope_logo img {
-    max-width: 68px;
-    max-height: 49px;
+    max-width: 90px;
+    max-height: 65px;
 }
 .p20_left{
 
@@ -789,6 +795,7 @@ img.logo_footer {
     width: auto;
 }
 .p21_logo {
+    background: transparent !important;
     position: absolute;
     height: 80px;
     width: 80px;
@@ -802,8 +809,8 @@ img.logo_footer {
     align-items: center;
 }
 .p21_logo img {
-    max-width: 68px;
-    max-height: 49px;
+    max-width: 83px;
+    max-height: 60px;
 }
 /*css page 21 end*/
 
