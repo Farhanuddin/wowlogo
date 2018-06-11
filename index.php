@@ -3,6 +3,40 @@
 <html>
 <?php
 
+      function convert2Rgb($colorhex){
+        $result = list($r, $g, $b) = sscanf($colorhex, "#%02x%02x%02x");
+        $result = implode(", ", $result);
+        return $result;
+      }
+
+        function hex2cmyk($hex) {
+        $color = str_replace('#','',$hex);
+          $var1 = array(
+             'r' => hexdec(substr($color,0,2)),
+             'g' => hexdec(substr($color,2,2)),
+             'b' => hexdec(substr($color,4,2)),
+          );
+
+          if (is_array($var1)) {
+             $r = $var1['r'];
+             $g = $var1['g'];
+             $b = $var1['b'];
+          } else {
+             $r = $var1;
+          }
+          $cyan = 255 - $r;
+          $magenta = 255 - $g;
+          $yellow = 255 - $b;
+          $black = min($cyan, $magenta, $yellow);
+          $cyan = @(($cyan    - $black) / (255 - $black));
+          $magenta = @(($magenta - $black) / (255 - $black));
+          $yellow = @(($yellow  - $black) / (255 - $black));
+
+        return $cyan.",".$magenta.",".$yellow.",".$black;
+          
+        }
+
+
       function uploadFile($file, $path, $filename=null){
         if(!empty($file))
         {
@@ -106,8 +140,7 @@
 
 
         if(isset($_GET['id'])) {
-          // die();       
-          //var_dump($_GET['id']);
+
       
           $logo_id = $_GET['id'];
           $sql = "SELECT * FROM logos where id='{$logo_id}'";
@@ -123,15 +156,12 @@
              die();
           }
 
-        }else{ 
-
-         
-
-             $route = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-          var_dump($route);
-          die();            
-            // $route = str_replace("index.php","", $route.'/form.php');
-            // header('Location: '. $route);
+        }else{
+             // $route = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+             //  var_dump($route);
+             //  die();            
+             // $route = str_replace("index.php","", $route.'/form.php');
+             // header('Location: '. $route);
 
         }
     
@@ -496,9 +526,9 @@
                   <div class="p9_cover_silder_logo secondary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> #F59588</span></p>
-                          <p> <b>RGB&nbsp; </b><span> 245, 149, 34</span></p>
-                          <p> <b>CMYK</b><span>1, 49, 98, 0</span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>; </span></p>
+                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['primary_bg_color']); ?></span></p>
+                          <p> <b>CMYK</b><span><?php echo hex2cmyk("{$logo_result['primary_bg_color']}"); ?></span></p>
                       </div>
                   </div>
               </div>
@@ -506,8 +536,8 @@
                   <div class="p9_cover_silder_logo primary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> #14355B</span></p>
-                          <p> <b>RGB&nbsp; </b><span> 20, 53, 91</span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?>;</span></p>
+                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['secondary_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span>100, 83, 38, 29</span></p>
                       </div>
                   </div>
@@ -518,8 +548,8 @@
                   <div class="p9_cover_silder_logo option1-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> #0C5587</span></p>
-                          <p> <b>RGB&nbsp; </b><span> 12, 85, 135</span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#000'; ?></span></p>
+                          <p> <b>RGB&nbsp; </b><span>  <?php echo convert2Rgb($logo_result['option1_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span>97, 70, 23, 7</span></p>
                       </div>
                   </div>
@@ -528,8 +558,8 @@
                   <div class="p9_cover_silder_logo option2-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> #D9D5D4</span></p>
-                          <p> <b>RGB&nbsp; </b><span> 217, 213, 212</span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#000'; ?></span></p>
+                          <p> <b>RGB&nbsp; </b><span>  <?php echo convert2Rgb($logo_result['option2_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span>14, 13, 12, 0</span></p>
                       </div>
                   </div>
