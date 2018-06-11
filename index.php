@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-
+error_reporting(-1);
       function convert2Rgb($colorhex){
         $result = list($r, $g, $b) = sscanf($colorhex, "#%02x%02x%02x");
         $result = implode(", ", $result);
@@ -57,7 +57,7 @@
               }
       
           }catch(\Exception $e){
-              //echo $e->getMessage();
+              echo $e->getMessage();
           }
         }
       }
@@ -141,7 +141,7 @@
 
         if(isset($_GET['id'])) {
 
-        
+         
           $logo_id = $_GET['id'];
           $sql = "SELECT * FROM logos where id='{$logo_id}'";
           $result = $conn->query($sql);
