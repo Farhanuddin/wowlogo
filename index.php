@@ -1,4 +1,5 @@
 <?php require('connection.php') ?>
+<?php require('functions.php') ?>
 <!DOCTYPE html>
 <html>
 <?php
