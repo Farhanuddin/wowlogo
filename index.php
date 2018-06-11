@@ -108,11 +108,9 @@
            //  //  die();            
            //   $route = str_replace("index.php","", $route.'/form.php');
            //   header('Location: '. $route);
-
         }
-    
-    ?>
 
+    ?>
 
   <head>
     <meta charset="utf-8">
@@ -469,7 +467,7 @@
           <!-- Cover Silde -->
           <div class="p9_cover_silder">
               <div class="box_left">
-                  <div class="p9_cover_silder_logo secondary-color">
+                  <div class="p9_cover_silder_logo primary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
                           <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>; </span></p>
@@ -479,7 +477,7 @@
                   </div>
               </div>
               <div class="box_right">
-                  <div class="p9_cover_silder_logo primary-color">
+                  <div class="p9_cover_silder_logo secondary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
                           <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?>;</span></p>
@@ -598,7 +596,7 @@
             </div>
             <div class="p11_cover_silder_logo option2-color">
               <div class="p11_logo_background_image">
-                <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
@@ -672,7 +670,7 @@
             <div class="p12_cover_silder_logo">
               <div class="p12_sub_nav option2-color">
                 <div class="p12_logo_background_image">
-                  <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
               </div>
               <div class="p12_sub_body">
@@ -780,7 +778,7 @@
               <p class="p16_email_heading primary-text-color">E-Mail Signature Example</p>
               <div class="p16_profile">
                 <div class="p16_profile_image">
-                  <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>" alt="">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" alt="">
                 </div>
                 <div class="p16_profile_text">
                   <p class="p16_name primary-text-color">Jone Smith | Job Title</p>
