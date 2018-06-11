@@ -855,7 +855,7 @@
           <div class="p18_cover_silder p18_facebook">
             <img src="image/social-media/facebook.png" class="p18_facebook_bg" alt="">
             <div class="p18_facebook_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
             </div>
             <div class="p18_facebook_cover_logo primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
@@ -871,7 +871,7 @@
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
                 </div>
                 <div class="p18_twitter_dp_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
                 </div>
               </div>
             </div>
@@ -880,7 +880,7 @@
               <div class="p18_cover_silder p18_instagram">
                 <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
                 <div class="p18_instagram_logo primary-color">
-                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
                 </div>
               </div>
             </div>
@@ -929,7 +929,7 @@
             <div class="p20_left">
               <img src="image/stationary/card.png" class="card_img" alt="">
               <div class="p20_card_logo primary-color">
-                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
               </div>
             </div>
           </div>
@@ -938,7 +938,7 @@
           <div class="p20_cover_silder envelope">
             <img src="image/stationary/envelope.png" class="envelope_img" alt="">
             <div class="p20_envelope_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
 
@@ -973,7 +973,7 @@
           <div class="p21_cover_silder letter">
             <img src="image/stationary/letterhead.png" class="letter_img" alt="">
             <div class="p21_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
         </div>
