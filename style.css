@@ -1,0 +1,1056 @@
+ody{
+  background: #9e9e9e;
+}
+*{
+    font-family: sans-serif;
+}
+
+
+/*css page heading start*/
+.s_brand_name {
+    font-family: sans-serif;
+    text-align: left;
+    padding-bottom: 17%;
+    font-size: 80px;
+    padding-left: 30px;
+    line-height: 80px;
+}
+.s_logo_image {
+    text-align: right;
+    margin-right: 25px;
+    padding-bottom: 25px;
+    position: absolute;
+    right: 20px;
+    bottom:  20px;
+}
+.s_logo_image img {
+    max-width: 264px;
+    max-height: 190px;
+}
+h1.f_brand_name {
+    padding-top: 20%;
+    font-family: sans-serif;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 80px;
+    padding-left: 30px;
+}
+/*css page heading end*/
+
+
+/*css page 1 start*/
+.page {
+  margin: auto;
+  max-width: 1024px;
+  height: 768px;
+  width: 100%;
+  position: relative;
+}
+.p1_brand_name {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 30%;
+    margin-bottom: 20px;
+    font-size: 80px;
+    padding-bottom: 0;
+}
+.p1_logo_image {
+    text-align: center;
+    padding-bottom: 15%;
+}
+.p1_logo_image img {
+    max-width: 250px;
+    max-height: 180px;
+}
+/*css page 1 end*/
+
+/*css page 3 start*/
+.p3_primary{
+    padding-left: 85px !important;
+    padding-top: 25px;
+}
+.p3_silder_heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(48, 51, 77);
+}
+.p3_cover_silder_logo {
+    text-align: center;
+}
+.p3_cover_silder_logo img {
+    max-width: 194px;
+    max-height: 140px;
+}
+.p3_main_logo {
+    padding: 40px 85px 0 85px;
+}
+.p3_nav_boby_left {
+    width: 50%;
+    float: left;
+    padding: 15px 0px;
+}
+.p3_logo img {
+    margin-top: 10px;
+    max-width: 111px;
+    max-height: 80px;
+}
+.p3_logo {
+    text-align: center;
+}
+/*css page 3 end*/
+
+/*css page 4 end*/
+.p4_primary{
+    padding-left: 85px !important;
+    padding-top: 25px;
+}
+.p4_primary_end {
+    padding-left: 85px !important;
+    padding-top: 25px;
+    margin-top: 160px;
+}
+/*css page 4 end*/
+
+/*css page 5 start*/
+.p5_silder_heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+.p5_bg_row {
+    padding: 25px 25px 25px 25px;
+}
+.p5_bg_col {
+    float: left;
+    width: 50%;
+}
+.p5_cover_silder_logo {
+    text-align: center;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p5_row{
+    margin-top: 260px;
+}
+.p5_cover_silder_logo img {
+    max-height: 90px;
+    max-width: 125px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/*css page 5 end*/
+
+
+/*css page 7 start*/
+h3.f_letter {
+    font-size: 80px;
+    line-height: 0px;
+    font-weight: 100;
+}
+p.capital_letter {
+    padding-top: 73px;
+    padding-left: 17px;
+    font-size: 17px;
+}
+p.small_letter {
+    padding-left: 17px;
+    font-size: 17px;
+    line-height: 0px;
+}
+p.numeric_letter {
+    padding-left: 17px;
+    font-size: 17px;
+    line-height: 20px;
+}
+.p7_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 12px;
+}
+.p7_silder_heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+/*css page 7 end*/
+
+
+/*css page 9 start*/
+.p9_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 141px;
+}
+.box_left {
+    float: left;
+}
+.p9_logo_div_image {
+    text-align: center;
+    padding-top: 134px;
+}
+.p9_color_codes {
+    border: 2px solid rgb(245, 245, 245);
+    margin-top: -23px;
+}
+.p9_color_codes p {
+    padding-left: 30px;
+}
+.p9_color_codes span {
+    padding-left: 26px;
+    font-weight: 600;
+}
+.p9_content {
+    float: left;
+    padding: 0px 25px;
+}
+.box_right {
+    float: right;
+}
+.p9_cover_silder_logo {
+    position: relative;
+    width: 260px;
+    height: 112px;
+    float: left;
+    margin-right: 25px;
+}
+
+.p9_content p {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 9px 0;
+}
+/*css page 9 end*/
+
+
+/*css page 11 start*/
+.p11_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.p11_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 575px;
+}
+.p11_margin_0{
+    margin: 0;
+}
+.p11_cover_silder_logo {
+    position: relative;
+    width: 48%;
+    height: 170px;
+    float: left;
+    margin: 3px;
+}
+.p11_vertical{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.p11_logo_div_image {
+    text-align: center;
+}
+.p11_logo_div_image img {
+    max-height: 75px;
+    max-width: 104px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p11_box_title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+.p11_logo_background_image {
+    padding: 10px;
+}
+.p11_logo_background_image img {
+    max-width: 42px;
+    max-height: 30px;
+}
+.p11_background_title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+.p11_background_subtitle {
+    text-align: center;
+    font-size: 12px;
+    margin: 8px;
+}
+/*css page 11 end*/
+
+
+/*css page 12 start*/
+.p12_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p12_cover_silder {
+    padding: 0px 50px;
+}
+.p12_cover_silder_logo {
+    position: relative;
+    width: 48%;
+    height: 185px;
+    float: left;
+    margin: 0.5%;
+    border: 1px solid #ccc;
+}
+.p12_sub_nav {
+    float: left;
+    width: 30%;
+    height: 185px;
+}
+.p12_logo_background_image{
+    padding: 10px;
+}
+.p12_logo_background_image img {
+    height: auto;
+    width: 100%;
+}
+.p12_sub_body {
+    float: left;
+    width: 70%;
+}
+.p12_sub_body p {
+    padding: 15px 15px;
+    color: #0e1438;
+    font-weight: 600;
+    font-size: 15px;
+}
+/*css page 12 end*/
+
+
+
+/*css page 14 start*/
+.p14_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p14_cover_silder {
+    width: 93%;
+    margin: 25px;
+}
+.p14_bg_body {
+    position: relative;
+    width: 66%;
+    float: left;
+}
+.p14_bg_nav {
+    position: relative;
+    float: left;
+    margin-left: 5%;
+    width: 25.1%;
+}
+.p14_bg_body .body_img {
+    width: 100%;
+    height: 335px;
+}
+.p14_bg_nav .nav_img {
+    width: 100%;
+    height: 335px;
+}
+.p14_bg_footer{
+    position: relative;
+    width: 96%;
+    float: left;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p14_bg_footer .footer_img{
+    width: 100%;
+}
+.logo_body {
+    width: 124px;
+    height: 77px;
+    position: absolute;
+    bottom: 4px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo_body img{
+    max-width: 56px;
+    max-height: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo_nav {
+    position: absolute;
+    width: auto;
+    height: 107px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    text-align: center;
+}
+.logo_nav img {
+    max-width: 56px;
+    max-height: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+img.logo_footer {
+    position: absolute;
+    max-height: 53px;
+    max-width: 74px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    left: 14px;
+}
+/*css page 14 end*/
+
+
+
+/*css page 16 start*/
+.p16_body_profile {
+    padding: 0 25px;
+    float: left;
+    width: 93%;
+    padding-bottom: 20px;
+}
+.p16_email_heading {
+    font-weight: 600;
+}
+.p16_profile_image {
+    float: left;
+    padding-right: 20px;
+}
+.p16_profile_text {
+    float: left;
+}
+.p16_profile_text .p16_name{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;
+}
+.p16_profile_text .p16_email {
+    margin: 0px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.p16_profile_text .p16_contact {
+    margin: 6px 0;
+    font-size: 15px;
+}
+.p16_profile_text .p16_address{
+    margin: 6px 0;
+    font-size: 15px;
+}
+.p16_profile_text .p16_subaddress{
+    margin: 6px 0;
+    font-size: 15px;
+}
+.p16_profile_image img {
+    max-width: 94px;
+    padding-top: 30px;
+    max-height: 68px;
+}
+.p16_border_bottom {
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0e1438;
+}
+.p16_website img {
+    height: 20px;
+    width: 20px;
+}
+.p16_website span {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 25px;
+}
+.p16_detail_text {
+    padding: 0px 25px;
+}
+.p16_detail_text p {
+    font-size: 11px;
+    font-weight: 600;
+}
+.p16_detail_text_bottom p {
+    font-size: 14px;
+}
+.p16_detail_text_bottom {
+    position: absolute;
+    bottom: 50px;
+    padding: 0 25px;
+}
+/*css page 16 end*/
+
+
+/*css page 18 start*/
+.p18_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p18_cover_silder {
+    position: relative;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.p18_col_60 {
+    float: left;
+    display: inline;
+    width: 60%;
+}
+.p18_col_40 {
+    float: left;
+    display: inline;
+    width: 40%;
+}
+.p18_facebook .p18_facebook_bg {
+    width: auto;
+    height: 160px;
+}
+.p18_twitter .p18_twitter_bg {
+    width: auto;
+    max-height: 350px;
+}
+.p18_instagram .p18_instagram_bg {
+    width: auto;
+    max-height: 350px;
+}
+.p18_facebook_logo {
+    position: absolute;
+    top: 17%;
+    left: 13%;
+    width: 71px;
+    border: 1px solid;
+    height: 70px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_facebook_logo img{
+    max-width: 50px;
+    max-height: 36px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.p18_facebook_cover_logo {
+    position: absolute;
+    top: 12%;
+    height: 141px;
+    width: 61%;
+    text-align: center;
+    left: 157px;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_facebook_cover_logo img {
+    max-width: 125px;
+    max-height: 90px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_twitter_logo {
+    position: absolute;
+    top: 2%;
+    height: 89px;
+    left: 25px;
+    width: 87%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_twitter_logo img {
+    max-width: 90px;
+    max-height: 65px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_twitter_dp_logo {
+    border: 1px solid #fff !important;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    left: 23%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_twitter_dp_logo img {
+    max-width: 28px;
+    max-height: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_instagram_logo {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 12%;
+    left: 14%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p18_instagram_logo img {
+    max-width: 28px;
+    max-height: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/*css page 18 end*/
+
+
+
+/*css page 20 Start*/
+.p20_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p20_cover_silder {
+    position: relative;
+    padding-left: 25px;
+    width: 278px;
+}
+.p20_cover_silder.card .card_img {
+    max-height: 200px;
+    max-width: 278px;
+}
+.p20_cover_silder.envelope .envelope_img {
+    max-height: 260px;
+    width: auto;
+}
+.p20_card_logo {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: 12%;
+    right: 45px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p20_card_logo img {
+    max-width: 44px;
+    max-height: 32px;
+}
+.p20_envelope_logo {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 12%;
+    text-align: center;
+    left: 18%;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p20_envelope_logo img {
+    max-width: 68px;
+    max-height: 49px;
+}
+.p20_left{
+
+}
+/*css page 20 end*/
+
+
+
+/*css page 21 Start*/
+.p21_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p21_cover_silder {
+    position: relative;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.p21_cover_silder.letter .letter_img {
+    max-height: 500px;
+    width: auto;
+}
+.p21_logo {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 5%;
+    text-align: center;
+    left: 10%;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p21_logo img {
+    max-width: 68px;
+    max-height: 49px;
+}
+/*css page 21 end*/
+
+
+
+/*css page 23 Start*/
+.border-line {
+    width: 100%;
+    height: 5px;
+}
+.page_detail {
+    background: #fff !important;
+    border-bottom: 20px solid;
+}
+.page_detail_top_heading {
+    position: relative;
+    height: 102px;
+    background: #fff;
+    margin-top: 20px;
+}
+.page_detail_logo_image {
+    width: 50%;
+    display: inline;
+    float: left;
+}
+.page_detail_logo_image img {
+    position: absolute;
+    bottom: 15%;
+    padding-left: 30px;
+    max-width: 74px;
+    max-height: 53px;
+}
+.page_detail_brand_identity {
+    width: 50%;
+    display: inline;
+    float: right;
+}
+.page_detail_brand_identity p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+.page_detail_nav {
+    width: 30%;
+    height: 660px;
+    background: #efeeec;
+    float: left;
+    display: inline;
+}
+.page_detail_nav_boby {
+    position: relative;
+    background: #fff;
+    padding-top: 30px;
+    height: 631px;
+    width: 70%;
+    float: right;
+    display: inline;
+}
+.page_detail_nav_border {
+    height: 3px;
+    width: 70%;
+    margin-top: 50px;
+}
+.page_detail_presentation_design {
+    padding-left: 40px;
+    font-size: 37px;
+    font-weight: 600;
+    padding-top: 20px;
+}
+.page_detail_presentation_design_detail {
+    padding-left: 40px;
+    padding-right: 70px;
+    font-size: 15px;
+    padding-top: 45px;
+}
+
+.p23_s_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;
+}
+.p23_s_cover_silder_logo {
+    position: relative;
+    width: 470px;
+    height: 400px;
+    float: left;
+    margin: 3px;
+}
+.p23_s_cover_silder_logo_2 {
+    position: relative;
+    width: 175px;
+    height: 400px;
+    float: left;
+    margin: 3px;
+    margin-left: 20px;
+}
+.p23_s_logo_div_image {
+    text-align: center;
+    padding-top: 50px;
+}
+.p23_s_logo_div_image img {
+    height: 60px;
+    width: auto;
+}
+.p23_s_box_title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+.p23_s_logo_background_image {
+    position: absolute;
+    bottom: 4px;
+    padding: 8px 15px 8px 30px;
+    border-right: 1px solid #008aff;
+    margin-bottom: 10px;
+}
+.p23_s_logo_background_image img {
+    height: 30px;
+    width: auto;
+}
+.p23_s_bottom {
+    position: absolute;
+    bottom: 0;
+}
+.p23_col_60 {
+    float: left;
+    display: inline;
+    width: 60%;
+}
+.p23_col_40 {
+    float: left;
+    display: inline;
+    width: 40%;
+}
+.p23_col_50 {
+    float: left;
+    display: inline;
+    width: 50%;
+}
+.p23_col_margin_both {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.p23_col_margin {
+    margin-top: 50px;
+}
+.p23_s_cover_silder {
+    position: relative;
+}
+.tshirt, .cap, .mug, .vehicle{
+  text-align: center;
+}
+.vehicle .vehicle_img {
+    width: auto;
+    max-height: 180px;
+}
+.mug .mug_img {
+    width: auto;
+    height: 160px;
+}
+.tshirt .tshirt_img {
+    width: auto;
+    height: 250px;
+}
+.cap .cap_img {
+    margin-top: 70px;
+    width: auto;
+    height: 150px;
+}
+.tshirt_logo {
+    top: 55px;
+    position: absolute;
+    text-align: center;
+    height: 70px;
+    width: 100px;
+    left: 125px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+}
+.tshirt_logo img {
+    max-width: 60px;
+    max-height: 43px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cap_logo {
+    position: absolute;
+    text-align: center;
+    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 34%;
+}
+.cap_logo img {
+    max-width: 60px;
+    max-height: 43px;
+}
+
+.mug_logo {
+    position: absolute;
+    text-align: center;
+    height: 155px;
+    width: 110px;
+    left: 66px;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.mug_logo img {
+    max-width: 60px;
+    max-height: 43px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vehicle_logo {
+    position: absolute;
+    text-align: center;
+    height: 50px;
+    width: 196px;
+    top: 32px;
+    right: 0;
+    left: 53px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.vehicle_logo img {
+    max-width: 97px;
+    max-height: 70px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+/*css page 23 end*/
+
+
+
+
+
+/* form Css */
+.form_body {
+    background: #fff;
+}
+.form_main {
+    width: 100%;
+}
+.form_main h4 {
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.heading {
+    border-bottom: 1px solid #fcab0e;
+    padding-bottom: 9px;
+    position: relative;
+}
+.heading span {
+    background: #9e6600 none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 120px;
+}
+.form-group {
+    height: 35px;
+}
+button.btn.btn-default {
+    width: 100%;
+}

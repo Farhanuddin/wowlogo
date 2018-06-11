@@ -1,0 +1,23 @@
+.primary-color{
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+.secondary-color{
+  background: #f26522;
+  color: #000;
+}
+.option1-color{
+  background: #1d1e1f;
+  color: #737070;
+}
+.option2-color{
+  background: #483103;
+  color: #b9beda;
+}
+.primary-text-color{
+  color: #000;
+}
+.secondary-text-color{
+  color: #f26522;
+}
