@@ -39,6 +39,21 @@
                         <input type="file" class="form-control" id="primary_logo"  name="primary_logo" required>
                       </div>
                     </div>
+
+                     <div class="form-group">
+                      <label class="control-label col-sm-2" for="primary_logo_tag">Primary Logo(Tag):</label>
+                      <div class="col-sm-10">
+                        <input type="file" class="form-control" id="primary_logo_tag"  name="primary_logo_tag" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="primary_logo_white">Primary Logo white:</label>
+                      <div class="col-sm-10">
+                        <input type="file" class="form-control" id="primary_logo_white"  name="primary_logo_white" required>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
                 <div class="panel panel-default">
