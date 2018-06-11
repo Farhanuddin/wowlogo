@@ -9,32 +9,32 @@
         return $result;
       }
 
-        function hex2cmyk($hex) {
-        $color = str_replace('#','',$hex);
-          $var1 = array(
-             'r' => hexdec(substr($color,0,2)),
-             'g' => hexdec(substr($color,2,2)),
-             'b' => hexdec(substr($color,4,2)),
-          );
+      function hex2cmyk($hex) {
+           $color = str_replace('#','',$hex);
+            $var1 = array(
+               'r' => hexdec(substr($color,0,2)),
+               'g' => hexdec(substr($color,2,2)),
+               'b' => hexdec(substr($color,4,2)),
+            );
 
-          if (is_array($var1)) {
-             $r = $var1['r'];
-             $g = $var1['g'];
-             $b = $var1['b'];
-          } else {
-             $r = $var1;
-          }
-          $cyan = 255 - $r;
-          $magenta = 255 - $g;
-          $yellow = 255 - $b;
-          $black = min($cyan, $magenta, $yellow);
-          $cyan = @(($cyan    - $black) / (255 - $black));
-          $magenta = @(($magenta - $black) / (255 - $black));
-          $yellow = @(($yellow  - $black) / (255 - $black));
+            if (is_array($var1)) {
+               $r = $var1['r'];
+               $g = $var1['g'];
+               $b = $var1['b'];
+            } else {
+               $r = $var1;
+            }
+            $cyan = 255 - $r;
+            $magenta = 255 - $g;
+            $yellow = 255 - $b;
+            $black = min($cyan, $magenta, $yellow);
+            $cyan = @(($cyan    - $black) / (255 - $black));
+            $magenta = @(($magenta - $black) / (255 - $black));
+            $yellow = @(($yellow  - $black) / (255 - $black));
 
-        return $cyan.",".$magenta.",".$yellow.",".$black;
-          
-        }
+          return $cyan.",".$magenta.",".$yellow.",".$black;
+        
+      }
 
 
       function uploadFile($file, $path, $filename=null){
@@ -141,7 +141,7 @@
 
         if(isset($_GET['id'])) {
 
-      
+        
           $logo_id = $_GET['id'];
           $sql = "SELECT * FROM logos where id='{$logo_id}'";
           $result = $conn->query($sql);
@@ -157,11 +157,11 @@
           }
 
         }else{
-             // $route = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-             //  var_dump($route);
-             //  die();            
-             // $route = str_replace("index.php","", $route.'/form.php');
-             // header('Location: '. $route);
+           //   $route = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+           // //   var_dump($route);
+           //  //  die();            
+           //   $route = str_replace("index.php","", $route.'/form.php');
+           //   header('Location: '. $route);
 
         }
     
