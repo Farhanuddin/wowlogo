@@ -52,15 +52,18 @@
           $font_bold = uploadFile($_FILES['font_bold'], 'fonts/');
           $font_regular = uploadFile($_FILES['font_regular'], 'fonts/');
 
+          $digits = 5;
+          $token = rand(pow(10, $digits-1), pow(10, $digits)-1);
+
           //insert into database
           $sql = "INSERT INTO logos 
-          (primary_bg_color, primary_fg_color, primary_logo_file, primary_logo_white, primary_logo_tag ,
+          (token, primary_bg_color, primary_fg_color, primary_logo_file, primary_logo_white, primary_logo_tag ,
           secondary_bg_color ,secondary_fg_color, secondary_logo, 
           option1_bg_color, option1_fg_color,option1_logo, 
           option2_bg_color, option2_fg_color, option2_logo,
           font_name, font_light, font_bold, font_regular, logo_white, logo_black)
           VALUES 
-          ('{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}', '{$primary_logo_white}', '{$primary_logo_tag}',
+          ('{$token}', '{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}', '{$primary_logo_white}', '{$primary_logo_tag}',
            '{$secondary_bg_color}', '{$secondary_fg_color}' ,'{$secondary_logo}',
            '{$option1_bg_color}', '{$option1_fg_color}', '{$option1_logo}', 
            '{$option2_bg_color}','{$option2_fg_color}','{$option2_logo}',
@@ -70,11 +73,12 @@
               
               $last_id = $conn->insert_id;
               
+             // var_dump($token);
+              //die();
               $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-              $route .= '?id='.$last_id;
+              $route .= '?id='.$token;
        
-
-               header('Location: '. $route);
+              header('Location: '. $route);
             
           } else {
               echo "Error: " . $sql . "<br>" . $conn->error;
@@ -89,7 +93,7 @@
 
         
           $logo_id = $_GET['id'];
-          $sql = "SELECT * FROM logos where id='{$logo_id}'";
+          $sql = "SELECT * FROM logos where token='{$logo_id}'";
           $result = $conn->query($sql);
 
           if($result->num_rows > 0){
