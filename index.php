@@ -53,7 +53,7 @@
           $font_regular = uploadFile($_FILES['font_regular'], 'fonts/');
 
           $digits = 5;
-          $token = rand(pow(10, $digits-1), pow(10, $digits)-1);
+          $token = randomKey(8);
 
           //insert into database
 
