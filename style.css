@@ -820,10 +820,12 @@ img.logo_footer {
 .border-line {
     width: 100%;
     height: 5px;
+    background: black;
 }
 .page_detail {
     background: #fff !important;
     border-bottom: 20px solid;
+    border-color: black;
 }
 .page_detail_top_heading {
     position: relative;
@@ -877,6 +879,7 @@ img.logo_footer {
     height: 3px;
     width: 70%;
     margin-top: 50px;
+    background: black;
 }
 .page_detail_presentation_design {
     font-family: 'ProximaNova-Bold';

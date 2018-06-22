@@ -7,43 +7,57 @@
       if($_SERVER["REQUEST_METHOD"] == "POST"){
 
           //Primary
+          //-- Color 1 / variation 1
           $primary_bg_color = $_POST['primary_bg_color'];
-          $primary_fg_color = $_POST['primary_fg_color'];
+          
+          
+          //$primary_fg_color = $_POST['primary_fg_color'];
 
-          $primary_logo_file = $_FILES['primary_logo']['tmp_name'];
-
+          //$primary_logo_file = $_FILES['primary_logo']['tmp_name'];
+          
+          //--  Logo 1
           $primary_logo = uploadFile($_FILES['primary_logo'], 'image/bg-logo/');
-
+          //-- Logo 2
           $primary_logo_white = uploadFile($_FILES['primary_logo_white'], 'image/bg-logo/');
 
-          $primary_logo_tag = uploadFile($_FILES['primary_logo_tag'], 'image/bg-logo/');
+          //$primary_logo_tag = uploadFile($_FILES['primary_logo_tag'], 'image/bg-logo/');
           //copy logo folder file - logo_white
           //$primary_logo = uploadFile($_FILES['primary_logo'], 'image/bg-logo/');
-          $logo_white = $primary_logo;
+         // $logo_white = $primary_logo;
 
           //copy('image/bg-logo/logo1.png', 'image/bg-logo/logo_white.png');
           //$logo_white = uploadFile($_FILES['primary_logo'], 'image/bg-logo/', 'logo_white.png');
 
           //Secondary
+          //--  Color 2 / variation 2
           $secondary_bg_color = $_POST['secondary_bg_color'];
-          $secondary_fg_color = $_POST['secondary_fg_color'];
-          $secondary_logo_file = $_FILES['secondary_logo'];
+         // $secondary_fg_color = $_POST['secondary_fg_color'];
+          //$secondary_logo_file = $_FILES['secondary_logo'];
 
-          $secondary_logo = uploadFile($_FILES['secondary_logo'], 'image/bg-logo/');
+          //$secondary_logo = uploadFile($_FILES['secondary_logo'], 'image/bg-logo/');
 
           //Upload logo folder file - logo_black
-          $logo_black = $secondary_logo;
+         // $logo_black = $secondary_logo;
           //copy('image/bg-logo/logo2.png', 'image/bg-logo/logo_black.png');
           //$logo_black = uploadFile($_FILES['secondary_logo'], 'image/bg-logo/', 'logo_black.png');
 
           //Option1
+          //-- Color 3 - Variant 4
           $option1_bg_color = $_POST['option1_bg_color'];
-          $option1_fg_color = $_POST['option1_fg_color'];
+          //$option1_fg_color = $_POST['option1_fg_color'];
+          
+          //-- option1 logo
           $option1_logo = uploadFile($_FILES['option1_logo'], 'image/bg-logo/');
 
-          //Option2
+          //-- Color 4 - Variant 4
           $option2_bg_color = $_POST['option2_bg_color'];
-          $option2_fg_color = $_POST['option2_fg_color'];
+
+          //-- Color 5 - Variant 4
+          $primary_fg_color = $option2_bg_color;
+
+          //$option2_fg_color = $_POST['option2_fg_color'];
+
+          //-- option2 logo
           $option2_logo = uploadFile($_FILES['option2_logo'], 'image/bg-logo/');
 
           //font
@@ -58,27 +72,25 @@
           //insert into database
 
           $sql = "INSERT INTO logos 
-          (token, primary_bg_color, primary_fg_color, primary_logo_file, primary_logo_white, primary_logo_tag ,
-          secondary_bg_color ,secondary_fg_color, secondary_logo, 
-          option1_bg_color, option1_fg_color,option1_logo, 
-          option2_bg_color, option2_fg_color, option2_logo,
-          font_name, font_light, font_bold, font_regular, logo_white, logo_black)
+          (token, primary_bg_color, primary_logo_file, primary_logo_white,
+          secondary_bg_color ,option1_bg_color, option1_logo, 
+          option2_bg_color, primary_fg_color, option2_logo,
+          font_name, font_light, font_bold, font_regular)
           VALUES 
-          ('{$token}', '{$primary_bg_color}', '{$primary_fg_color}', '{$primary_logo}', '{$primary_logo_white}', '{$primary_logo_tag}',
-           '{$secondary_bg_color}', '{$secondary_fg_color}' ,'{$secondary_logo}',
-           '{$option1_bg_color}', '{$option1_fg_color}', '{$option1_logo}',
-           '{$option2_bg_color}','{$option2_fg_color}','{$option2_logo}',
-           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}', '{$logo_white}', '{$logo_black}')";
+          ('{$token}', '{$primary_bg_color}', '{$primary_logo}', '{$primary_logo_white}',
+           '{$secondary_bg_color}','{$option1_bg_color}', '{$option1_logo}',
+           '{$option2_bg_color}','{$primary_fg_color}', '{$option2_logo}',
+           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}')";
 
           if ($conn->query($sql) === TRUE) {
 
               $last_id = $conn->insert_id;
 
               
-               //var_dump($token);
-              //die();
-              //$route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-              $route = "http://site.startupbug.net:6888/wowlogo/index.php";
+              //  var_dump($token);
+              // die();
+              $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+              //$route = "http://site.startupbug.net:6888/wowlogo/index.php";
               $route .= '?id='.$token;
        
               header('Location: '. $route);
@@ -101,7 +113,8 @@
           if($result->num_rows > 0){
             //logo fetched
               $logo_result = $result->fetch_assoc();
-
+           // var_dump($logo_result);
+            //die();
           }else{
             //redirect to form.php
              echo 'Design Not Found';
@@ -141,11 +154,11 @@
     .primary-color{
         background: <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>;
         border-color: <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>;;
-        color: <?php echo isset($logo_result['primary_fg_color']) ? $logo_result['primary_fg_color'] : '#fff'; ?>;;
+        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['primary_fg_color'] : '#fff'; ?>;;
       }
       .secondary-color{
         background: <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#f26522'; ?>;
-        color: <?php echo isset($logo_result['secondary_fg_color']) ? $logo_result['secondary_fg_color'] : '#000'; ?>;
+        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['secondary_fg_color'] : '#000'; ?>;
       }
       .option1-color{
         background: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#1d1e1f'; ?>;
@@ -156,7 +169,7 @@
         color: <?php echo isset($logo_result['option2_fg_color']) ? $logo_result['option2_fg_color'] : '#b9beda'; ?>;
       }
       .primary-text-color{
-        color: <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>;
+        color: #000;
       }
       .secondary-text-color{
         color:<?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#f26522'; ?>;
@@ -186,7 +199,7 @@
     <!-- page 2 end -->
 
     <!-- page 3 start -->
-    <div class="page page_detail primary-color" id="page3">
+    <div class="page page_detail" id="page3">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -195,12 +208,12 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
-            Corporate Design
+            Corporate Design and variation
           </div>
           <div class="primary-text-color page_detail_presentation_design_detail">
             The Corporate logo should be used at all times.
@@ -223,18 +236,18 @@
             <div class="p3_nav_boby_left">
               <p class="p3_silder_heading primary-text-color">Logo Color 1</p>
               <div class="p3_logo">
-                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['option1_logo'] ?>">
               </div>
             </div>
 
             <div class="p3_nav_boby_left">
               <p class="p3_silder_heading primary-text-color">Logo Color 2</p>
               <div class="p3_logo">
-                 <img src="image/bg-logo/<?php echo $logo_result['secondary_logo'] ?>">
+                 <img src="image/bg-logo/<?php echo $logo_result['option2_logo'] ?>">
               </div>
             </div>
 
-            <div class="p3_nav_boby_left">
+            <!-- <div class="p3_nav_boby_left">
               <p class="p3_silder_heading primary-text-color">Logo Color 3</p>
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option1_logo'] ?>">
@@ -246,7 +259,7 @@
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option2_logo'] ?>">
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -254,7 +267,7 @@
     <!-- page 3 end -->
 
     <!-- page 4 start -->
-    <div class="page page_detail primary-color" id="page4">
+    <!-- <div class="page page_detail" id="page4">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -263,10 +276,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Logo Variations
           </div>
@@ -288,11 +301,11 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- page 4 end -->
 
     <!-- page 5 start -->
-    <div class="page page_detail primary-color" id="page5">
+    <div class="page page_detail" id="page5">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -301,10 +314,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Logo Variations
           </div>
@@ -323,7 +336,7 @@
             </div>
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 2</p>
-              <div class="p5_cover_silder_logo primary-color">
+              <div class="p5_cover_silder_logo secondary-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
@@ -360,7 +373,7 @@
     <!-- page 6 end -->
 
     <!-- page 9 start -->
-    <div class="page page_detail primary-color" id="page7">
+    <div class="page page_detail" id="page7">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -369,10 +382,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Corporate Typography
           </div>
@@ -443,7 +456,7 @@
     <!-- page 8 end -->
 
     <!-- page 9 start -->
-    <div class="page page_detail primary-color" id="page9">
+    <div class="page page_detail" id="page9">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -452,10 +465,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Corporate <br>Colors
           </div>
@@ -476,6 +489,7 @@
                   <div class="p9_cover_silder_logo primary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
+                      
                           <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>; </span></p>
                           <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['primary_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span><?php echo hex2cmyk("{$logo_result['primary_bg_color']}"); ?></span></p>
@@ -483,7 +497,7 @@
                   </div>
               </div>
               <div class="box_right">
-                  <div class="p9_cover_silder_logo primary-color">
+                  <div class="p9_cover_silder_logo secondary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
                           <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?>;</span></p>
@@ -536,7 +550,7 @@
     <!-- page 10 end -->
 
     <!-- page 11 start -->
-    <div class="page page_detail primary-color" id="page11">
+    <div class="page page_detail" id="page11">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -545,10 +559,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Presentation Design
           </div>
@@ -566,7 +580,7 @@
               </div> -->
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
-            <div class="p11_cover_silder_logo p11_logo_img primary-color">
+            <div class="p11_cover_silder_logo p11_logo_img secondary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               <!-- <div class="p11_logo_div_image">
               </div> -->
@@ -584,7 +598,7 @@
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
             </div>
-            <div class="p11_cover_silder_logo primary-color">
+            <div class="p11_cover_silder_logo secondary-color">
               <div class="p11_logo_background_image">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
@@ -616,7 +630,7 @@
     <!-- page 11 end -->
 
     <!-- page 12 start -->
-    <div class="page page_detail primary-color" id="page12">
+    <div class="page page_detail" id="page12">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -625,10 +639,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Presentation Design
           </div>
@@ -652,7 +666,7 @@
               </div>
             </div>
             <div class="p12_cover_silder_logo">
-              <div class="p12_sub_nav primary-color">
+              <div class="p12_sub_nav secondary-color">
                 <div class="p12_logo_background_image">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
@@ -701,7 +715,7 @@
     <!-- page 13 end -->
 
     <!-- page 14 start -->
-    <div class="page page_detail primary-color" id="page14">
+    <div class="page page_detail" id="page14">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -710,10 +724,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Display <br>Ad Design
           </div>
@@ -759,7 +773,7 @@
     <!-- page 15 end -->
 
     <!-- page 16 start -->
-    <div class="page page_detail primary-color" id="page16">
+    <div class="page page_detail" id="page16">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -768,10 +782,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             E-Mail <br>Design
           </div>
@@ -790,7 +804,7 @@
                 </div>
                 <div class="p16_profile_text">
                   <p class="p16_name primary-text-color">Jone Smith | Job Title</p>
-                  <p class="p16_email secondary-text-color">Jone@sharestates.com</p>
+                  <p class="p16_email primary-text-color">Jone@sharestates.com</p>
                   <p class="p16_contact primary-text-color">1-212-201-0705</p>
                   <p class="p16_address primary-text-color">11 Middle Neck Road</p>
                   <p class="p16_subaddress primary-text-color">Suite 400A, Great Neck, NY 11021</p>
@@ -799,7 +813,7 @@
             </div>
           </div>
           <div class="p16_body_bottom">
-            <div class="p16_website secondary-text-color">
+            <div class="p16_website primary-text-color">
               <span>website.com</span>
               <img src="image/e-mail/linkedin_logo.png" alt="">
               <img src="image/e-mail/twitter_logo.png" alt="">
@@ -835,7 +849,7 @@
     <!-- page 17 end -->
 
     <!-- page 18 start -->
-    <div class="page page_detail primary-color" id="page18">
+    <div class="page page_detail" id="page18">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -844,10 +858,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Social Media Profiles
           </div>
@@ -908,7 +922,7 @@
     <!-- page 19 end -->
 
     <!-- page 20 start -->
-    <div class="page page_detail primary-color" id="page20">
+    <div class="page page_detail" id="page20">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -917,10 +931,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Stationary Designs
           </div>
@@ -954,7 +968,7 @@
     <!-- page 20 end -->
 
     <!-- page 21 start -->
-    <div class="page page_detail primary-color" id="page21">
+    <div class="page page_detail" id="page21">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -963,10 +977,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Stationary Designs
           </div>
@@ -998,7 +1012,7 @@
     <!-- page 22 end -->
 
     <!-- page 23 Start -->
-    <div class="page page_detail primary-color" id="page23">
+    <div class="page page_detail" id="page23">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -1007,10 +1021,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Designs For Merchandise
           </div>

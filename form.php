@@ -20,11 +20,11 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">Primary</div>
                   <div class="panel-body">
-                  
+
                     <div class="form-group">
                       <label class="control-label col-sm-2" for="primary_logo">Primary Logo:</label>
                       <div class="col-sm-10">
-                        <input type="file" class="form-control" id="primary_logo"  name="primary_logo" required>
+                        <input type="file" class="form-control" id="primary_logo" name="primary_logo" required>
                       </div>
                     </div>
 
@@ -52,29 +52,40 @@
                   </div>
                 </div>
                 <div class="panel panel-default">
-                  <div class="panel-heading">Secondary</div>
+                  <div class="panel-heading">Color</div>
                   <div class="panel-body">
+  
                     <div class="form-group">
-                      <label class="control-label col-sm-2" for="secondary_bg_color">BG Color:</label>
+                      <label class="control-label col-sm-2" for="primary_bg_color">Color 1:</label>
+                      <div class="col-sm-10">
+                        <input type="color" class="form-control" id="primary_bg_color" name="primary_bg_color" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-sm-2" for="secondary_bg_color">Color 2:</label>
                       <div class="col-sm-10">
                         <input type="color" class="form-control" id="secondary_bg_color" name="secondary_bg_color" required>
                       </div>
                     </div>
+
                     <div class="form-group">
-                      <label class="control-label col-sm-2" for="secondary_fg_color">FG Color:</label>
+                      <label class="control-label col-sm-2" for="option1_bg_color">Color 3:</label>
                       <div class="col-sm-10">
-                        <input type="color" class="form-control" id="secondary_fg_color" name="secondary_fg_color" required>
+                        <input type="color" class="form-control" id="option1_bg_color" name="option1_bg_color" required>
                       </div>
                     </div>
+                    
                     <div class="form-group">
-                      <label class="control-label col-sm-2" for="secondary_logo">Secondary Logo:</label>
+                      <label class="control-label col-sm-2" for="option2_bg_color ">Color 4:</label>
                       <div class="col-sm-10">
-                        <input type="file" class="form-control" id="secondary_logo"  name="secondary_logo" required>
+                        <input type="color" class="form-control" id="option2_bg_color " name="option2_bg_color" required>
                       </div>
                     </div>
+
                   </div>
                 </div>
-                <div class="panel panel-default">
+                <!-- <div class="panel panel-default">
                   <div class="panel-heading">Option 1</div>
                   <div class="panel-body">
                     <div class="form-group">
@@ -119,7 +130,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="panel panel-default">
                   <div class="panel-heading">Font</div>
                   <div class="panel-body">
