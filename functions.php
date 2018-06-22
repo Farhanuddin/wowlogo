@@ -2,6 +2,10 @@
 
       function chkFloat($value){
 
+        if(is_nan($value)){
+          return 0;
+        }
+
         if(is_float($value)){
            $value = sprintf('%0.2f', $value); 
            return $value*100;
@@ -13,7 +17,7 @@
 
       function randomKey($length) {
           $pool = array_merge(range(0,9), range('a', 'z'),range('A', 'Z'));
-
+          $key = '';
           for($i=0; $i < $length; $i++) {
               $key .= $pool[mt_rand(0, count($pool) - 1)];
           }
