@@ -175,7 +175,7 @@
     <!-- page 1 end -->
 
     <!-- page 2 start -->
-    <div class="page secondary-color" id="page2">
+    <div class="page primary-color" id="page2">
       <h1 class="f_brand_name">01.</h1>
       <h1 class="s_brand_name">LOGO DESIGN</h1>
       <div class="s_logo_image">
@@ -197,7 +197,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Corporate Design
           </div>
@@ -265,7 +265,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Logo Variations
           </div>
@@ -303,7 +303,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Logo Variations
           </div>
@@ -322,7 +322,7 @@
             </div>
             <div class="p5_bg_col">
               <p class="p5_silder_heading primary-text-color">Background 2</p>
-              <div class="p5_cover_silder_logo secondary-color">
+              <div class="p5_cover_silder_logo primary-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
@@ -349,7 +349,7 @@
     <!-- page 5 end -->
 
     <!-- page 6 start -->
-    <div class="page secondary-color" id="page6">
+    <div class="page primary-color" id="page6">
       <h1 class="f_brand_name">02.</h1>
       <h1 class="s_brand_name">TYPOGRAPHY</h1>
       <div class="s_logo_image">
@@ -371,7 +371,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Corporate Typography
           </div>
@@ -432,7 +432,7 @@
     <!-- page 7 end -->
 
     <!-- page 8 start -->
-    <div class="page secondary-color" id="page8">
+    <div class="page primary-color" id="page8">
       <h1 class="f_brand_name">03.</h1>
       <h1 class="s_brand_name">COLOR</h1>
       <div class="s_logo_image">
@@ -454,7 +454,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Corporate <br>Colors
           </div>
@@ -482,7 +482,7 @@
                   </div>
               </div>
               <div class="box_right">
-                  <div class="p9_cover_silder_logo secondary-color">
+                  <div class="p9_cover_silder_logo primary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
                           <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?>;</span></p>
@@ -525,7 +525,7 @@
     <!-- page 9 end -->
 
     <!-- page 10 start -->
-    <div class="page secondary-color" id="page10">
+    <div class="page primary-color" id="page10">
       <h1 class="f_brand_name">04.</h1>
       <h1 class="s_brand_name">PRESENTATION</h1>
       <div class="s_logo_image">
@@ -547,7 +547,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Presentation Design
           </div>
@@ -565,7 +565,7 @@
               </div> -->
               <p class="p11_box_title">Presentation Title Goes Here</p>
             </div>
-            <div class="p11_cover_silder_logo p11_logo_img secondary-color">
+            <div class="p11_cover_silder_logo p11_logo_img primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               <!-- <div class="p11_logo_div_image">
               </div> -->
@@ -583,7 +583,7 @@
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
             </div>
-            <div class="p11_cover_silder_logo secondary-color">
+            <div class="p11_cover_silder_logo primary-color">
               <div class="p11_logo_background_image">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
@@ -627,7 +627,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Presentation Design
           </div>
@@ -651,7 +651,7 @@
               </div>
             </div>
             <div class="p12_cover_silder_logo">
-              <div class="p12_sub_nav secondary-color">
+              <div class="p12_sub_nav primary-color">
                 <div class="p12_logo_background_image">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
@@ -690,7 +690,7 @@
     <!-- page 13 end -->
 
     <!-- page 13 start -->
-    <div class="page secondary-color" id="page13">
+    <div class="page primary-color" id="page13">
       <h1 class="f_brand_name">05.</h1>
       <h1 class="s_brand_name">ADVERTISEMENTS</h1>
       <div class="s_logo_image">
@@ -712,7 +712,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Display <br>Ad Design
           </div>
@@ -748,7 +748,7 @@
     <!-- page 14 end -->
 
     <!-- page 15 start -->
-    <div class="page secondary-color" id="page15">
+    <div class="page primary-color" id="page15">
       <h1 class="f_brand_name">06.</h1>
       <h1 class="s_brand_name">E-MAIL</h1>
       <div class="s_logo_image">
@@ -770,7 +770,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             E-Mail <br>Design
           </div>
@@ -824,7 +824,7 @@
     <!-- page 16 end -->
 
     <!-- page 17 start -->
-    <div class="page secondary-color" id="page17">
+    <div class="page primary-color" id="page17">
       <h1 class="f_brand_name">07.</h1>
       <h1 class="s_brand_name">SOCIAL MEDIA</h1>
       <div class="s_logo_image">
@@ -846,7 +846,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Social Media Profiles
           </div>
@@ -897,7 +897,7 @@
     <!-- page 18 end -->
 
     <!-- page 19 start -->
-    <div class="page secondary-color" id="page19">
+    <div class="page primary-color" id="page19">
       <h1 class="f_brand_name">08.</h1>
       <h1 class="s_brand_name">STATIONARY</h1>
       <div class="s_logo_image">
@@ -919,7 +919,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Stationary Designs
           </div>
@@ -965,7 +965,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Stationary Designs
           </div>
@@ -987,7 +987,7 @@
     <!-- page 21 end -->
 
     <!-- page 22 start -->
-    <div class="page secondary-color" id="page22">
+    <div class="page primary-color" id="page22">
       <h1 class="f_brand_name">09.</h1>
       <h1 class="s_brand_name">MERCHANDISING</h1>
       <div class="s_logo_image">
@@ -1009,7 +1009,7 @@
       <div class="border-line primary-color"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border secondary-color"></div>
+          <div class="page_detail_nav_border primary-color"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Designs For Merchandise
           </div>
