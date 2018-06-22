@@ -234,19 +234,20 @@
               </div>
             </div>
 
-            <div class="p3_nav_boby_left">
+            <!-- <div class="p3_nav_boby_left">
               <p class="p3_silder_heading primary-text-color">Logo Color 3</p>
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option1_logo'] ?>">
               </div>
-            </div>
+            </div> -->
 
-            <div class="p3_nav_boby_left">
+            <!-- <div class="p3_nav_boby_left">
               <p class="p3_silder_heading primary-text-color">Logo Color 4</p>
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option2_logo'] ?>">
               </div>
-            </div>
+            </div> -->
+            
           </div>
         </div>
       </div>
@@ -592,7 +593,32 @@
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
             </div>
           </div>
-          <div class="p11_cover_silder">
+
+          <div class="p12_cover_silder">
+            <div class="p12_cover_silder_logo">
+              <div class="p12_sub_nav primary-color">
+                <div class="p12_logo_background_image">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+                </div>
+              </div>
+              <div class="p12_sub_body">
+                <p>Slide Title</p>
+              </div>
+            </div>
+            <div class="p12_cover_silder_logo">
+              <div class="p12_sub_nav primary-color">
+                <div class="p12_logo_background_image">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+                </div>
+              </div>
+              <div class="p12_sub_body">
+                <p>Slide Title</p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- <div class="p11_cover_silder">
             <div class="p11_cover_silder_logo option1-color">
               <div class="p11_logo_background_image">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
@@ -607,7 +633,7 @@
               <p class="p11_background_title">Slide Title <br>Goes Here</p>
               <p class="p11_background_subtitle">Subtitle Goes Here</p>
             </div>
-          </div>
+          </div> -->
 
 
         </div>
@@ -616,7 +642,8 @@
     <!-- page 11 end -->
 
     <!-- page 12 start -->
-    <div class="page page_detail primary-color" id="page12">
+
+    <!-- <div class="page page_detail primary-color" id="page12">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -637,8 +664,6 @@
           </div>
         </div>
         <div class="page_detail_nav_boby">
-
-          <!-- Background Colors -->
           <p class="p12_silder_heading primary-text-color">Background Color 3</p>
           <div class="p12_cover_silder">
             <div class="p12_cover_silder_logo">
@@ -684,11 +709,11 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
-    <!-- page 13 end -->
+    </div> -->
+
+    <!-- page 12 end -->
 
     <!-- page 13 start -->
     <div class="page primary-color" id="page13">
@@ -868,30 +893,81 @@
             </div>
           </div>
 
-          <div class="new_row">
-            <div class="p18_col_60">
-              <p class="p18_silder_heading primary-text-color">Twitter</p>
-              <div class="p18_cover_silder p18_twitter">
-                <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
-                <div class="p18_twitter_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
-                </div>
-                <div class="p18_twitter_dp_logo primary-color">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
+    <!-- page 18 end -->
+
+    <!-- page 18 Second Page start -->
+    <div class="page page_detail primary-color" id="page18_2">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line primary-color"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border primary-color"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Social Media Profiles
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Social Media account.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p18_silder_heading primary-text-color">Twitter</p>
+          <div class="p18_cover_silder p18_twitter">
+            <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
+            <div class="p18_twitter_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
-            <div class="p18_col_40">
-              <p class="p18_silder_heading primary-text-color">Instagram</p>
-              <div class="p18_cover_silder p18_instagram">
-                <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
-                <div class="p18_instagram_logo primary-color">
-                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
-                </div>
-              </div>
+            <div class="p18_twitter_dp_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
             </div>
           </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- page 18 end -->
 
+      <!-- page 18 Second Page start -->
+    <div class="page page_detail primary-color" id="page18_3">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line primary-color"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border primary-color"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Social Media Profiles
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Social Media account.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p18_silder_heading primary-text-color">Instagram</p>
+          <div class="p18_cover_silder p18_instagram">
+            <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
+            <div class="p18_instagram_logo primary-color">
+               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -998,7 +1074,7 @@
     <!-- page 22 end -->
 
     <!-- page 23 Start -->
-    <div class="page page_detail primary-color" id="page23">
+    <div class="page page_detail primary-color" id="page23_1">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -1020,54 +1096,122 @@
         </div>
         <div class="page_detail_nav_boby">
 
-          <div class="p23_new_row">
-            <div class="p23_col_50 p23_col_margin_both">
-              <p class="p23_s_silder_heading primary-text-color ">VEHICLE WRAPPING</p>
-            </div>
-            <div class="p23_col_50 p23_col_margin_both">
-              <p class="p23_s_silder_heading primary-text-color ">MUGS</p>
-            </div>
-            <div class="p23_col_60">
-              <div class="p23_s_cover_silder vehicle">
-                <img src="image/merchandise/vehicle.png" class="vehicle_img" alt="">
-                <div class="vehicle_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
-                </div>
-              </div>
-            </div>
-            <div class="p23_col_40">
-              <div class="p23_s_cover_silder mug">
-                <img src="image/merchandise/mug.png" class="mug_img" alt="">
-                <div class="mug_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
-                </div>
-              </div>
+          <p class="p23_s_silder_heading primary-text-color ">VEHICLE WRAPPING</p>
+          <div class="p23_s_cover_silder vehicle">
+            <img src="image/merchandise/vehicle.png" class="vehicle_img" alt="">
+            <div class="vehicle_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
-          <div class="p23_new_row">
-            <div class="p23_col_50 p23_col_margin">
-              <p class="p23_s_silder_heading primary-text-color">TSHIRTS</p>
-            </div>
-            <div class="p23_col_50 p23_col_margin">
-              <p class="p23_s_silder_heading primary-text-color">CAPS</p>
-            </div>
-            <div class="p23_col_50">
-              <div class="p23_s_cover_silder tshirt">
-                <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
-                <div class="tshirt_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
-                </div>
-              </div>
-            </div>
-            <div class="p23_col_50">
-              <div class="p23_s_cover_silder cap">
-                <img src="image/merchandise/cap.png" class="cap_img" alt="">
-                <div class="cap_logo">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
-                </div>
-              </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- page 23 end -->
+
+    <!-- page 23 Start -->
+    <div class="page page_detail primary-color" id="page23_2">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line primary-color"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border primary-color"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Designs For Merchandise
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Merchandise Designs.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p23_s_silder_heading primary-text-color ">MUGS</p>
+          <div class="p23_s_cover_silder mug">
+            <img src="image/merchandise/mug.png" class="mug_img" alt="">
+            <div class="mug_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- page 23 end -->
+
+    <!-- page 23 Start -->
+    <div class="page page_detail primary-color" id="page23_3">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line primary-color"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border primary-color"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Designs For Merchandise
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Merchandise Designs.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p23_s_silder_heading primary-text-color">TSHIRTS</p>
+          <div class="p23_s_cover_silder tshirt">
+            <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
+            <div class="tshirt_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- page 23 end -->
+
+    <!-- page 23 Start -->
+    <div class="page page_detail primary-color" id="page23_4">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line primary-color"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border primary-color"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Designs For Merchandise
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Merchandise Designs.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p23_s_silder_heading primary-text-color">CAPS</p>
+          <div class="p23_s_cover_silder cap">
+            <img src="image/merchandise/cap.png" class="cap_img" alt="">
+            <div class="cap_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
