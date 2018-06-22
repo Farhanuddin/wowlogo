@@ -902,8 +902,8 @@ img.logo_footer {
 }
 
 .p23_s_silder_heading {
-    padding-left: 25px;
-    font-size: 15px;
+    font-size: 18px;
+    text-align:  center;
     font-weight: 600;
     color: #0e1438;
 }
@@ -1026,14 +1026,23 @@ img.logo_footer {
 .cap_logo {
     position: absolute;
     text-align: center;
-    height: auto;
-    left: 0;
-    top: 42%;
+    height: 100px;
+    width: 150px;
+    top: 36%;
     right: 0;
+    left: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 .cap_logo img {
     max-width: 81px;
     max-height: 58px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mug_logo {
