@@ -233,14 +233,14 @@
 
           <div class="p3_main_logo">
             <div class="p3_nav_boby_left">
-              <p class="p3_silder_heading primary-text-color">Logo Color 1</p>
+              <p class="p3_silder_heading primary-text-color">Variation 1</p>
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option1_logo'] ?>">
               </div>
             </div>
 
             <div class="p3_nav_boby_left">
-              <p class="p3_silder_heading primary-text-color">Logo Color 2</p>
+              <p class="p3_silder_heading primary-text-color">Variation 2</p>
               <div class="p3_logo">
                  <img src="image/bg-logo/<?php echo $logo_result['option2_logo'] ?>">
               </div>
@@ -318,7 +318,8 @@
         <div class="page_detail_nav">
           <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
-            Logo Variations
+            Logo <br>
+            Variations
           </div>
           <div class="primary-text-color page_detail_presentation_design_detail">
             The Logo may include the brand's tagline, "Wall Street Deals for Main Street Investors" .
@@ -328,13 +329,13 @@
 
           <div class="p5_bg_row">
             <div class="p5_bg_col">
-              <p class="p5_silder_heading primary-text-color">Background 1</p>
+              <p class="p5_silder_heading primary-text-color">Variation 1</p>
               <div class="p5_cover_silder_logo primary-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
             <div class="p5_bg_col">
-              <p class="p5_silder_heading primary-text-color">Background 2</p>
+              <p class="p5_silder_heading primary-text-color">Variation 2</p>
               <div class="p5_cover_silder_logo secondary-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
@@ -343,13 +344,13 @@
 
           <div class="p5_bg_row p5_row">
             <div class="p5_bg_col">
-              <p class="p5_silder_heading primary-text-color">Background 3</p>
+              <p class="p5_silder_heading primary-text-color">Variation 3</p>
               <div class="p5_cover_silder_logo option1-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
             </div>
             <div class="p5_bg_col">
-              <p class="p5_silder_heading primary-text-color">Background 4</p>
+              <p class="p5_silder_heading primary-text-color">Variation 4</p>
               <div class="p5_cover_silder_logo option2-color">
                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
