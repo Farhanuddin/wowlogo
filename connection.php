@@ -1,6 +1,6 @@
 <?php
 
-  $servername = "localhost";
+  $servername = "web1.aimviz.com";
   $username = "global";
   $password = "secret";
   $dbname = "wow";
