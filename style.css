@@ -345,16 +345,17 @@ p.numeric_letter {
 }
 .p12_cover_silder_logo {
     position: relative;
-    width: 48%;
-    height: 185px;
+    width: 48.7%;
+    height: 170px;
     float: left;
-    margin: 0.5%;
+    margin-top: 4px;
+    margin-right: 3px;
     border: 1px solid #ccc;
 }
 .p12_sub_nav {
     float: left;
     width: 30%;
-    height: 185px;
+    height: 170px;
 }
 .p12_logo_background_image{
     padding: 10px;
@@ -1027,7 +1028,7 @@ img.logo_footer {
     text-align: center;
     height: auto;
     left: 0;
-    top: 30%;
+    top: 42%;
     right: 0;
 }
 .cap_logo img {

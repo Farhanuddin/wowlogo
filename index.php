@@ -618,7 +618,7 @@
               </div>
             </div>
             <div class="p12_cover_silder_logo">
-              <div class="p12_sub_nav primary-color">
+              <div class="p12_sub_nav secondary-color">
                 <div class="p12_logo_background_image">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
                 </div>
