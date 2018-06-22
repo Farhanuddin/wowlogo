@@ -227,7 +227,7 @@
         <div class="page_detail_nav_boby">
 
           <p class="p3_silder_heading primary-text-color p3_primary">Primary logo</p>
-          <div class="p3_cover_silder_logo">
+          <div class="p3_cover_silder_logo size_fix">
              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
           </div>
 
@@ -763,8 +763,8 @@
             <div class="p14_bg_body">
               <img src="image/ads/body.png" class="body_img" alt="">
               <div class="p14_image_absolute">
-                <div class="logo_body">
-                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_body" alt="">
+                <div class="p14_bg_footer">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_footer" alt="">
                 </div>
               </div>
             </div>
@@ -914,7 +914,7 @@
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

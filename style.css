@@ -99,8 +99,12 @@ h1.f_brand_name {
     text-align: center;
 }
 .p3_cover_silder_logo img {
-    max-width: 194px;
-    max-height: 140px;
+    max-width: 220px;
+    max-height: 158px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 .p3_main_logo {
     padding: 40px 85px 0 85px;
@@ -470,7 +474,7 @@ img.logo_footer {
 }
 .p14_image_absolute{
    position: absolute;
-   bottom: 4px;
+   bottom: 10px;
    width: 124px;
    height: 77px;
 }
@@ -1074,9 +1078,9 @@ img.logo_footer {
 .vehicle_logo {
     position: absolute;
     text-align: center;
-    height: 120px;
+    height: 150px;
     width: 340px;
-    top: 64px;
+    top: 54px;
     right: 0;
     left: 78px;
     display: flex;
@@ -1085,8 +1089,8 @@ img.logo_footer {
     align-items: center;
 }
 .vehicle_logo img {
-    max-width: 120px;
-    max-height: 86px;
+    max-width: 180px;
+    max-height: 140px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1131,4 +1135,11 @@ img.logo_footer {
 }
 button.btn.btn-default {
     width: 100%;
+}
+.size_fix{
+    height: 159px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
