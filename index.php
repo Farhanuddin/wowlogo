@@ -73,10 +73,12 @@
           if ($conn->query($sql) === TRUE) {
 
               $last_id = $conn->insert_id;
+
               
                //var_dump($token);
               //die();
-              $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+              //$route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+              $route = "http://site.startupbug.net:6888/wowlogo/index.php";
               $route .= '?id='.$token;
        
               header('Location: '. $route);
@@ -91,7 +93,6 @@
 
 
         if(isset($_GET['id'])) {
-
 
           $logo_id = $_GET['id'];
           $sql = "SELECT * FROM logos where token='{$logo_id}'";
@@ -1072,62 +1073,5 @@
     </div>
     <!-- page 23 end -->
 
-<script>
-
-function convertHex(hex,opacity){
-   hex = hex.replace('#','');
-   r = parseInt(hex.substring(0,2), 16);
-   g = parseInt(hex.substring(2,4), 16);
-   b = parseInt(hex.substring(4,6), 16);
-
-   result = 'rgba('+r+','+g+','+b+')';
-   return result;
-}
-
-function hexToCMYK (hex) {
-    var computedC = 0;
-    var computedM = 0;
-    var computedY = 0;
-    var computedK = 0;
-
-    hex = (hex.charAt(0)=="#") ? hex.substring(1,7) : hex;
-
-    if (hex.length != 6) {
-     alert ('Invalid length of the input hex value!');
-     return;
-    }
-    if (/[0-9a-f]{6}/i.test(hex) != true) {
-     alert ('Invalid digits in the input hex value!');
-     return;
-    }
-
-    var r = parseInt(hex.substring(0,2),16);
-    var g = parseInt(hex.substring(2,4),16);
-    var b = parseInt(hex.substring(4,6),16);
-
-    // BLACK
-    if (r==0 && g==0 && b==0) {
-     computedK = 1;
-     return [0,0,0,1];
-    }
-
-    computedC = 1 - (r/255);
-    computedM = 1 - (g/255);
-    computedY = 1 - (b/255);
-
-    var minCMY = Math.min(computedC,Math.min(computedM,computedY));
-
-    computedC = ((computedC - minCMY) / (1 - minCMY)).toFixed(2) ;
-    computedM = ((computedM - minCMY) / (1 - minCMY)).toFixed(2) ;
-    computedY = ((computedY - minCMY) / (1 - minCMY)).toFixed(2) ;
-    computedK = (minCMY).toFixed(2);
-    return 'cmyk('+computedC+','+computedM+','+computedY+','+computedK+')';
-}
-
-
-$('h2').html(hexToCMYK('#A7D136'));
-$('h1').html(convertHex('#A7D136'));
-
-</script>
   </body>
 </html>
