@@ -86,11 +86,10 @@
 
               $last_id = $conn->insert_id;
 
-              
               //  var_dump($token);
               // die();
-              $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-              //$route = "http://site.startupbug.net:6888/wowlogo/index.php";
+              // $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+              $route = "http://site.startupbug.net:6888/wowlogo/index.php";
               $route .= '?id='.$token;
        
               header('Location: '. $route);
