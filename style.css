@@ -88,7 +88,7 @@ h1.f_brand_name {
 /*css page 3 start*/
 .p3_primary{
     padding-left: 85px !important;
-    padding-top: 25px;
+    padding-top: 80px;
 }
 .p3_silder_heading {
     font-size: 16px;
@@ -112,8 +112,8 @@ h1.f_brand_name {
 }
 .p3_logo img {
     margin-top: 10px;
-    max-width: 111px;
-    max-height: 80px;
+    max-width: 160px;
+    max-height: 115px;
 }
 .p3_logo {
     text-align: center;
@@ -451,8 +451,8 @@ p.numeric_letter {
     text-align: center;
 }
 .logo_nav img {
-    max-width: 56px;
-    max-height: 40px;
+    max-width: 95px;
+    max-height: 68px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -528,8 +528,8 @@ img.logo_footer {
     font-size: 15px;
 }
 .p16_profile_image img {
-    max-width: 94px;
-    max-height: 68px;
+    max-width: 150px;
+    max-height: 108px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -571,7 +571,6 @@ img.logo_footer {
 
 /*css page 18 start*/
 .p18_silder_heading {
-    padding-top: 70px;
     padding-left: 25px;
     font-size: 15px;
     font-weight: 600;
@@ -580,6 +579,7 @@ img.logo_footer {
 .p18_cover_silder {
     position: relative;
     width: 93%;
+    margin-bottom: 30px;
     float: left;
     padding-left: 25px;
     padding-right: 25px;
@@ -603,8 +603,8 @@ img.logo_footer {
     height: auto;
 }
 .p18_instagram .p18_instagram_bg {
-    width: 100%;
-    max-height: 350px;
+    width: auto;
+    height: 450px;
 }
 .p18_facebook_logo {
     background: #fff !important;
@@ -621,8 +621,8 @@ img.logo_footer {
     align-items: center;
 }
 .p18_facebook_logo img{
-    max-width: 50px;
-    max-height: 36px;
+    max-width: 80px;
+    max-height: 64px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -631,6 +631,7 @@ img.logo_footer {
 
 .p18_facebook_cover_logo {
     position: absolute;
+    background: transparent !important;
     top: 13%;
     height: 168px;
     width: 498px;
@@ -643,14 +644,16 @@ img.logo_footer {
     align-items: center;
 }
 .p18_facebook_cover_logo img {
+    display: none;
     max-width: 125px;
     max-height: 90px;
-    display: flex;
+    /* display: flex; */
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 .p18_twitter_logo {
+    background: transparent !important;
     position: absolute;
     top: 9%;
     height: 170px;
@@ -663,9 +666,10 @@ img.logo_footer {
     align-items: center;
 }
 .p18_twitter_logo img {
+    display:  none;
     max-width: 140px;
     max-height: 101px;
-    display: flex;
+    /* display: flex; */
     flex-flow: column;
     justify-content: center;
     align-items: center;
@@ -686,20 +690,20 @@ img.logo_footer {
     align-items: center;
 }
 .p18_twitter_dp_logo img {
-    max-width: 56px;
-    max-height: 40px;
+    max-width: 69px;
+    max-height: 54px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 .p18_instagram_logo {
-    background: #fff !important;
+    background: transparent !important;
     position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 40%;
-    left: 7%;
+    width: 110px;
+    height: 110px;
+    top: 15%;
+    left: 3%;
     text-align: center;
     border-radius: 50%;
     display: flex;
@@ -708,8 +712,8 @@ img.logo_footer {
     align-items: center;
 }
 .p18_instagram_logo img {
-    max-width: 110px;
-    max-height: 79px;
+    max-width: 100px;
+    max-height: 72px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1002,10 +1006,10 @@ img.logo_footer {
     height: auto;
 }
 .tshirt_logo {
-    top: 30%;
+    top: 26%;
     position: absolute;
     text-align: center;
-    height: 150px;
+    height: 120px;
     width: 150px;
     left: 39%;
     display: flex;
@@ -1015,8 +1019,8 @@ img.logo_footer {
     right: 0;
 }
 .tshirt_logo img {
-    max-width: 81px;
-    max-height: 58px;
+    max-width: 120px;
+    max-height: 86px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1037,8 +1041,8 @@ img.logo_footer {
     align-items: center;
 }
 .cap_logo img {
-    max-width: 81px;
-    max-height: 58px;
+    max-width: 139px;
+    max-height: 100px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1059,8 +1063,8 @@ img.logo_footer {
     align-items: center;
 }
 .mug_logo img {
-    max-width: 110px;
-    max-height: 79px;
+    max-width: 160px;
+    max-height: 115px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1070,7 +1074,7 @@ img.logo_footer {
 .vehicle_logo {
     position: absolute;
     text-align: center;
-    height: 110px;
+    height: 120px;
     width: 340px;
     top: 64px;
     right: 0;
@@ -1081,8 +1085,8 @@ img.logo_footer {
     align-items: center;
 }
 .vehicle_logo img {
-    max-width: 97px;
-    max-height: 70px;
+    max-width: 120px;
+    max-height: 86px;
     display: flex;
     flex-flow: column;
     justify-content: center;

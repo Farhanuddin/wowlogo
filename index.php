@@ -212,7 +212,7 @@
         <div class="page_detail_nav">
           <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
-            Corporate Design and variation
+            Corporate Design and Variations
           </div>
           <div class="primary-text-color page_detail_presentation_design_detail">
             The Corporate logo should be used at all times.
@@ -318,11 +318,10 @@
         <div class="page_detail_nav">
           <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
-            Logo <br>
-            Variations
+            Logo With Background
           </div>
           <div class="primary-text-color page_detail_presentation_design_detail">
-            The Logo may include the brand's tagline, "Wall Street Deals for Main Street Investors" .
+            The logo may be placed on solid brand colored backgrounds. On light backgrounds, The primary logo should be used. On the backgrounds, the logo should be reversed to white. 
           </div>
         </div>
         <div class="page_detail_nav_boby">
@@ -589,7 +588,7 @@
           </div>
 
           <!-- Background Colors -->
-          <p class="p11_silder_heading primary-text-color">Background Color 3</p>
+          <p class="p11_silder_heading primary-text-color">Inner Pages</p>
           <div class="p11_cover_silder p11_margin_0">
             <div class="p11_cover_silder_logo primary-color">
               <div class="p11_logo_background_image">
@@ -905,13 +904,24 @@
             </div>
           </div>
 
+          <p class="p18_silder_heading primary-text-color">Twitter</p>
+          <div class="p18_cover_silder p18_twitter">
+            <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
+            <div class="p18_twitter_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
+            </div>
+            <div class="p18_twitter_dp_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
     <!-- page 18 end -->
 
     <!-- page 18 Second Page start -->
-    <div class="page page_detail primary-color" id="page18_2">
+    <!-- <div class="page page_detail primary-color" id="page18_2">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -946,7 +956,7 @@
           
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- page 18 end -->
 
       <!-- page 18 Second Page start -->
