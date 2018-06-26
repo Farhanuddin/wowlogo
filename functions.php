@@ -7,7 +7,7 @@
         }
 
         if(is_float($value)){
-           $value = sprintf('%0.2f', $value); 
+           $value = sprintf('%0.2f', $value);
            return $value*100;
         }else{
            return $value;
@@ -22,10 +22,12 @@
               $key .= $pool[mt_rand(0, count($pool) - 1)];
           }
           return $key;
-      }      
+      }
 
       function convert2Rgb($colorhex){
         $result = list($r, $g, $b) = sscanf($colorhex, "#%02x%02x%02x");
+        //var_dump($result);
+        //die()
         $result = implode(", ", $result);
         return $result;
       }
@@ -54,7 +56,7 @@
             $yellow = @(($yellow  - $black) / (255 - $black));
 
           return chkFloat($cyan).",".chkFloat($magenta).",".chkFloat($yellow).",".chkFloat($black);
-        
+
       }
 
 
@@ -67,7 +69,7 @@
           }else{
             $filename = $filename;
           }
-          
+
           $path = $path.$filename;
 
           try{
@@ -76,7 +78,7 @@
               } else{
                   //echo "There was an error uploading the file, please try againzz!".$filename.'<br>';
               }
-      
+
           }catch(\Exception $e){
               //echo $e->getMessage();
           }

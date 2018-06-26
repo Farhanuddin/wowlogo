@@ -20,69 +20,80 @@
                 <div class="panel panel-default">
                   <div class="panel-heading">Primary</div>
                   <div class="panel-body">
-
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="primary_logo">Primary Logo:</label>
-                      <div class="col-sm-10">
-                        <input type="file" class="form-control" id="primary_logo" name="primary_logo" required>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="primary_bg_color">BG 1:</label>
+                          <div class="col-sm-9">
+                            <input type="color" class="form-control" id="primary_bg_color" name="primary_bg_color" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="primary_logo">Logo 1:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="primary_logo" name="primary_logo" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="secondary_bg_color">BG 2:</label>
+                          <div class="col-sm-9">
+                            <input type="color" class="form-control" id="secondary_bg_color" name="secondary_bg_color" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="primary_logo_white">Logo 2:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="primary_logo_white"  name="primary_logo_white" required>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="primary_logo_white">Primary Logo white:</label>
-                      <div class="col-sm-10">
-                        <input type="file" class="form-control" id="primary_logo_white"  name="primary_logo_white" required>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label class="control-label col-sm-2" for="option1_logo">Option 1 Logo:</label>
                       <div class="col-sm-10">
                         <input type="file" class="form-control" id="option1_logo"  name="option1_logo" required>
                       </div>
-                    </div>   
+                    </div>
 
                     <div class="form-group">
                       <label class="control-label col-sm-2" for="option2_logo">Option 2 Logo:</label>
                       <div class="col-sm-10">
                         <input type="file" class="form-control" id="option2_logo"  name="option2_logo" required>
                       </div>
-                    </div>
+                    </div> -->
 
                   </div>
                 </div>
                 <div class="panel panel-default">
                   <div class="panel-heading">Color</div>
                   <div class="panel-body">
-  
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="primary_bg_color">Color 1:</label>
-                      <div class="col-sm-10">
-                        <input type="color" class="form-control" id="primary_bg_color" name="primary_bg_color" required>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="option1_bg_color">Color 1:</label>
+                          <div class="col-sm-9">
+                            <input type="color" class="form-control" id="option1_bg_color" name="option1_bg_color" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="option2_bg_color ">Color 2:</label>
+                          <div class="col-sm-9">
+                            <input type="color" class="form-control" id="option2_bg_color " name="option2_bg_color" required>
+                          </div>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="secondary_bg_color">Color 2:</label>
-                      <div class="col-sm-10">
-                        <input type="color" class="form-control" id="secondary_bg_color" name="secondary_bg_color" required>
-                      </div>
-                    </div>
-
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="option1_bg_color">Color 3:</label>
-                      <div class="col-sm-10">
-                        <input type="color" class="form-control" id="option1_bg_color" name="option1_bg_color" required>
-                      </div>
-                    </div>
-                    
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="option2_bg_color ">Color 4:</label>
-                      <div class="col-sm-10">
-                        <input type="color" class="form-control" id="option2_bg_color " name="option2_bg_color" required>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
                 <!-- <div class="panel panel-default">
