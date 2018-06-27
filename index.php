@@ -87,6 +87,7 @@
               //  var_dump($token);
               // die();
                //$route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+
               $route = "http://site.startupbug.net:6888/wowlogo/index.php";
               $route .= '?id='.$token;
 
@@ -409,7 +410,7 @@
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
 
-                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?>; </span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?> </span></p>
                           <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['primary_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span><?php echo hex2cmyk("{$logo_result['primary_bg_color']}"); ?></span></p>
                       </div>
@@ -419,7 +420,7 @@
                   <div class="p9_cover_silder_logo secondary-color">
                       <div class="p9_logo_div_image"></div>
                       <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?>;</span></p>
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?></span></p>
                           <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['secondary_bg_color']); ?></span></p>
                           <p> <b>CMYK</b><span>100, 83, 38, 29</span></p>
                       </div>

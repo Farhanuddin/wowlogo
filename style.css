@@ -25,7 +25,22 @@ body{
     font-family: 'ProximaNova-Bold';
 }
 
+.logout{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.logout>.btn{
+     padding: 5px 11px;
+     background-color: #fcab0e;
+     border-color: #fcab0e;
+}
 
+.logout>.btn:hover, .logout>.btn:focus, .logout>.btn-:active{
+     padding: 5px 11px;
+     background-color: #fcab0e;
+     border-color: #fcab0e;
+}
 /*css page heading start*/
 .s_brand_name {
     font-family: 'ProximaNova-Bold';
