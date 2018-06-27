@@ -814,10 +814,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Social Media Profiles
           </div>
@@ -844,7 +844,7 @@
     <!-- page 18 end -->
 
       <!-- page 18 Second Page start -->
-    <div class="page page_detail primary-color" id="page18_3">
+    <div class="page page_detail" id="page18_3">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -853,10 +853,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Social Media Profiles
           </div>
@@ -1025,10 +1025,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Designs For Merchandise
           </div>
@@ -1061,10 +1061,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Designs For Merchandise
           </div>
@@ -1097,10 +1097,10 @@
           <p>Brand Identity Standards</p>
         </span>
       </div>
-      <div class="border-line primary-color"></div>
+      <div class="border-line"></div>
       <div class="page_detail_body">
         <div class="page_detail_nav">
-          <div class="page_detail_nav_border primary-color"></div>
+          <div class="page_detail_nav_border"></div>
           <div class="primary-text-color page_detail_presentation_design">
             Designs For Merchandise
           </div>
