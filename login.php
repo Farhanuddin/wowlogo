@@ -27,7 +27,8 @@ require('connection.php') ?>
                $_SESSION['msg'] = 'Successfully Authorized';
 
                //cheap
-               $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+               // $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+               $route = "http://site.startupbug.net:6888/wowlogo/login.php";
                $route = str_replace("/login.php","", $route);
                $route .= '/form.php';
 
