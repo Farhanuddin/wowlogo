@@ -184,8 +184,17 @@
         color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#b9beda'; ?>;
       }
 
-      .option1-text{
-        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?>;
+      .option1-text-color{
+        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?> !important;
+      }
+
+
+      .option2-text-color{
+        color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#b9beda'; ?> !important;
+      }
+
+      .p14_body_80 span, .p14_nav_bottom span{
+        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?> !important;
       }
 
     </style>
@@ -194,7 +203,7 @@
 
     <!-- page 1 start -->
     <div class="page primary-color" id="page1">
-      <h1 class="p1_brand_name option1-text">BRAND</h1>
+      <h1 class="p1_brand_name option1-text-color">BRAND</h1>
       <div class="p1_logo_image">
         <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
       </div>
@@ -537,13 +546,13 @@
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
               <!-- <div class="p11_logo_div_image">
               </div> -->
-              <p class="p11_box_title">Presentation Title Goes Here</p>
+              <p class="p11_box_title option1-text-color">Presentation Title Goes Here</p>
             </div>
             <div class="p11_cover_silder_logo p11_logo_img secondary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               <!-- <div class="p11_logo_div_image">
               </div> -->
-              <p class="p11_box_title">Presentation Title Goes Here</p>
+              <p class="p11_box_title option2-text-color">Presentation Title Goes Here</p>
             </div>
           </div>
 
@@ -554,15 +563,15 @@
               <div class="p11_logo_background_image">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
               </div>
-              <p class="p11_background_title">Slide Title <br>Goes Here</p>
-              <p class="p11_background_subtitle">Subtitle Goes Here</p>
+              <p class="p11_background_title option1-text-color">Slide Title <br>Goes Here</p>
+              <p class="p11_background_subtitle option1-text-color">Subtitle Goes Here</p>
             </div>
             <div class="p11_cover_silder_logo secondary-color">
               <div class="p11_logo_background_image">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
               </div>
-              <p class="p11_background_title">Slide Title <br>Goes Here</p>
-              <p class="p11_background_subtitle">Subtitle Goes Here</p>
+              <p class="p11_background_title option2-text-color">Slide Title <br>Goes Here</p>
+              <p class="p11_background_subtitle option2-text-color">Subtitle Goes Here</p>
             </div>
           </div>
 
@@ -650,7 +659,7 @@
             <div class="p14_bg_body primary-gradient">
               <div class="p14_body_body">
                 <img src="image/ads/body.jpg" class="body_img" alt="">
-                <div class="p14_body_text secondary-color">
+                <div class="p14_body_text secondary-color option2-text-color">
                   A Powerful Headline Goes Right Here.
                 </div>
               </div>
@@ -659,12 +668,12 @@
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="logo_body_body" alt="">
                 </div>
                 <div class="p14_body_80">
-                  <div class="p14_body_bottom_heading">
+                  <div class="p14_body_bottom_heading option1-text-color">
                     <span>
                       A Strong Supporting
                       Subheadline Goes Here.
                     </span>
-                    <button type="button" name="button" class="p14_button secondary-color">Call to Action</button>
+                    <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
                   </div>
                 </div>
               </div>
@@ -674,12 +683,12 @@
               <div class="logo_nav">
                 <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>"  alt="">
               </div>
-              <div class="p14_image_absolute primary-color p14_nav_bottom">
+              <div class="p14_image_absolute primary-color p14_nav_bottom option1-text-color">
                 <span>
                   A Strong Supporting
                   Subheadline Goes Here.
                 </span>
-                <button type="button" name="button" class="p14_button secondary-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
               </div>
             </div>
             <div class="p14_bg_footer primary-gradient">
@@ -689,16 +698,16 @@
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="logo_footer" alt="">
                 </div>
                 <div class="p14_80_footer">
-                  <div class="p14_footer_text secondary-color">
+                  <div class="p14_footer_text secondary-color option2-text-color">
                     A Powerful Headline Goes Right Here.
                   </div>
-                  <div class="p14_footer_text_second secondary-color">
+                  <div class="p14_footer_text_second secondary-color option2-text-color">
                     A Strong Supporting Subheadline Goes Here
                   </div>
                 </div>
               </div>
               <div class="p14_footer_body_20 primary-color">
-                <button type="button" name="button" class="p14_button secondary-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
               </div>
             </div>
           </div>
