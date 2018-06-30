@@ -64,7 +64,7 @@ require('functions.php')
 
               <form target="_blank" action="index.php" method="post" enctype="multipart/form-data">
                 <div class="panel panel-default">
-                  <div class="panel-heading">Primary</div>
+                  <div class="panel-heading">Logo</div>
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-md-6">
@@ -190,7 +190,7 @@ require('functions.php')
                 </div> -->
                 <div class="panel panel-default">
                   <div class="panel-heading">Font</div>
-                  <div class="panel-body">
+              <!--     <div class="panel-body">
                     <div class="form-group">
                       <label class="control-label col-sm-2" for="font_name">Font Name:</label>
                       <div class="col-sm-10">
@@ -215,7 +215,74 @@ require('functions.php')
                         <input type="file" class="form-control" id="font_regular" name="font_regular" required>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+
+                <div class="panel-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="font1_text">Font(1) Text:</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="font1_text" name="font1_text" required>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                         <label class="control-label col-sm-3" for="font_light">Font Light:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="font_light" name="font_light" required>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="font2_text">Font(2) Text:</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="font2_text" name="font2_text" required>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="font_bold">Font Bold:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="font_bold" name="font_bold" required>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="font3_text">Font(3) Text:</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="font3_text" name="font3_text" required>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="font_regular">Font Regular:</label>
+                          <div class="col-sm-9">
+                            <input type="file" class="form-control" id="font_regular" name="font_regular" required>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              
                 </div>
                 <div class="form-group">
                   <div class="col-sm-offset-10 col-sm-2">

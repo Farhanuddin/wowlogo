@@ -62,10 +62,15 @@
           // $option2_logo = uploadFile($_FILES['option2_logo'], 'image/bg-logo/');
 
           //font
-          $font_name = $_POST['font_name'];
+          //$font_name = $_POST['font_name'];
           $font_light = uploadFile($_FILES['font_light'], 'fonts/');
           $font_bold = uploadFile($_FILES['font_bold'], 'fonts/');
           $font_regular = uploadFile($_FILES['font_regular'], 'fonts/');
+
+          //Font text addition
+          $font1_text = $_POST['font1_text'];
+          $font2_text = $_POST['font2_text'];
+          $font3_text = $_POST['font3_text'];
 
           $digits = 5;
           $token = randomKey(8);
@@ -74,11 +79,12 @@
 
           $sql = "INSERT INTO logos
           (token, primary_bg_color, primary_logo_file, primary_logo_white,
-          secondary_bg_color, option1_bg_color, option2_bg_color, font_name, font_light, font_bold, font_regular)
+          secondary_bg_color, option1_bg_color, option2_bg_color, font_name, font_light, font_bold, font_regular
+          ,font1_text, font2_text, font3_text)
           VALUES
           ('{$token}', '{$primary_bg_color}', '{$primary_logo}', '{$primary_logo_white}',
            '{$secondary_bg_color}', '{$option1_bg_color}', '{$option2_bg_color}' ,
-           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}')";
+           '{$font_name}', '{$font_light}', '{$font_bold}', '{$font_regular}', '{$font1_text}', '{$font2_text}', '{$font3_text}')";
 
           if ($conn->query($sql) === TRUE) {
 
@@ -86,8 +92,8 @@
 
               //  var_dump($token);
               // die();
-              // $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-              $route = "http://site.startupbug.net:6888/wowlogo/index.php";
+              $route = "http://" . $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
+              //$route = "http://site.startupbug.net:6888/wowlogo/index.php";
               $route .= '?id='.$token;
 
               header('Location: '. $route);
@@ -175,13 +181,17 @@
         color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#b9beda'; ?>;
       }
 
+      .option1-text{
+        color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?>;
+      }
+
     </style>
   </head>
   <body>
 
     <!-- page 1 start -->
     <div class="page primary-color" id="page1">
-      <h1 class="p1_brand_name">BRAND</h1>
+      <h1 class="p1_brand_name option1-text">BRAND</h1>
       <div class="p1_logo_image">
         <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
       </div>
@@ -225,7 +235,7 @@
             While the primary logo color is preferred, alternate colors can be used depending on the environment in which the logo is enclosed.
           </div>
         </div>
-        <div class="page_detail_nav_boby">
+        <!-- <div class="page_detail_nav_boby">
 
           <p class="p3_silder_heading primary-text-color p3_primary">Concept 1</p>
           <div class="p3_cover_silder_logo size_fix">
@@ -234,7 +244,23 @@
           <p class="p3_silder_heading primary-text-color p3_primary">Concept 2</p>
           <div class="p3_cover_silder_logo size_fix">
              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+          </div> -->
+
+        <div class="page_detail_nav_boby">
+
+
+          <div class="p5_bg_row">
+            <p class="p5_silder_heading primary-text-color">Variation 1</p>
+            <div class="p5_cover_silder_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            </div>
+            <p class="p5_silder_heading primary-text-color">Variation 2</p>
+            <div class="p5_cover_silder_logo secondary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
           </div>
+
+        </div>
 
         </div>
       </div>
@@ -242,7 +268,7 @@
     <!-- page 3 end -->
 
     <!-- page 5 start -->
-    <div class="page page_detail" id="page5">
+ <!--    <div class="page page_detail" id="page5">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
           <img src="image/main-logo/logo.png">
@@ -277,8 +303,9 @@
           </div>
 
         </div>
+
       </div>
-    </div>
+    </div> -->
     <!-- page 5 end -->
 
     <!-- page 6 start -->
@@ -326,7 +353,7 @@
              <!-- Cover Silde -->
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Light</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font1_text']) ? $logo_result['font1_text'] : 'Default'; ?> </p>
                    <h3 class="f_letter" style="font-family: font_light !important;">A <span style="font-family: font_light !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -338,7 +365,7 @@
              <div style="clear:both"></div>
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Regular</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font2_text']) ? $logo_result['font2_text'] : 'Default'; ?> </p>
                    <h3 class="f_letter" style="font-family: font_regular !important;">A <span style="font-family: font_regular !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -350,7 +377,7 @@
              <div style="clear:both"></div>
              <div class="p7_cover_silder primary-text-color">
                 <div class="box_left">
-                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font_name']) ? $logo_result['font_name'] : 'Default'; ?> Bold</p>
+                   <p class="p7_silder_heading primary-text-color"><?php echo isset($logo_result['font3_text']) ? $logo_result['font3_text'] : 'Default'; ?> </p>
                    <h3 class="f_letter" style="font-family: font_bold !important;">A <span style="font-family: font_bold !important;">a</span></h3>
                 </div>
                 <div class="box_left">
@@ -401,32 +428,11 @@
         </div>
         <div class="page_detail_nav_boby">
 
-          <p class="p11_silder_heading primary-text-color">Primary Brand Colors</p>
+          <p class="p11_silder_heading primary-text-color">Brand Colors</p>
+          
           <!-- Cover Silde -->
           <div class="p9_cover_silder">
-              <div class="box_left">
-                  <div class="p9_cover_silder_logo primary-color">
-                      <div class="p9_logo_div_image"></div>
-                      <div class="p9_color_codes primary-text-color">
 
-                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?> </span></p>
-                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['primary_bg_color']); ?></span></p>
-                          <p> <b>CMYK</b><span><?php echo hex2cmyk("{$logo_result['primary_bg_color']}"); ?></span></p>
-                      </div>
-                  </div>
-              </div>
-              <div class="box_right">
-                  <div class="p9_cover_silder_logo secondary-color">
-                      <div class="p9_logo_div_image"></div>
-                      <div class="p9_color_codes primary-text-color">
-                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?></span></p>
-                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['secondary_bg_color']); ?></span></p>
-                          <p> <b>CMYK</b><span>100, 83, 38, 29</span></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="p9_cover_silder">
               <div class="box_left">
                   <div class="p9_cover_silder_logo option1-color">
                       <div class="p9_logo_div_image"></div>
@@ -448,6 +454,36 @@
                       </div>
                   </div>
               </div>
+
+          </div>
+
+          <p class="p11_silder_heading primary-text-color">Background Colors</p>
+
+          <div class="p9_cover_silder">
+
+
+              <div class="box_left">
+                  <div class="p9_cover_silder_logo primary-color">
+                      <div class="p9_logo_div_image"></div>
+                      <div class="p9_color_codes primary-text-color">
+
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#000'; ?> </span></p>
+                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['primary_bg_color']); ?></span></p>
+                          <p> <b>CMYK</b><span><?php echo hex2cmyk("{$logo_result['primary_bg_color']}"); ?></span></p>
+                      </div>
+                  </div>
+              </div>
+              <div class="box_right">
+                  <div class="p9_cover_silder_logo secondary-color">
+                      <div class="p9_logo_div_image"></div>
+                      <div class="p9_color_codes primary-text-color">
+                          <p> <b>HEX&nbsp; </b><span> <?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#000'; ?></span></p>
+                          <p> <b>RGB&nbsp; </b><span> <?php echo convert2Rgb($logo_result['secondary_bg_color']); ?></span></p>
+                          <p> <b>CMYK</b><span>100, 83, 38, 29</span></p>
+                      </div>
+                  </div>
+              </div>
+
           </div>
           <div class="p9_content primary-text-color">
               <p>To ensure color consistency, please adhere to these specifications and use qualified vendors and reliable reproduction methods.</p>
