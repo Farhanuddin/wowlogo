@@ -187,6 +187,13 @@
         color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#b9beda'; ?>;
       }
 
+      .option1-bg-color{
+         background: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#000'; ?>;
+      }
+      .option2-bg-color{
+          background: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#000'; ?>;
+      }
+
       .option1-text-color{
         color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?> !important;
       }
@@ -665,7 +672,7 @@
             <div class="p14_bg_body primary-gradient">
               <div class="p14_body_body">
                 <img src="image/ads/body.jpg" class="body_img" alt="">
-                <div class="p14_body_text secondary-color option2-text-color">
+                <div class="p14_body_text primary-color option1-bg-color">
                   A Powerful Headline Goes Right Here.
                 </div>
               </div>
@@ -679,7 +686,7 @@
                       A Strong Supporting
                       Subheadline Goes Here.
                     </span>
-                    <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
+                    <button type="button" name="button" class="p14_button primary-color option1-bg-color">Call to Action</button>
                   </div>
                 </div>
               </div>
@@ -694,7 +701,7 @@
                   A Strong Supporting
                   Subheadline Goes Here.
                 </span>
-                <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button primary-color option1-bg-color">Call to Action</button>
               </div>
             </div>
             <div class="p14_bg_footer primary-gradient">
@@ -704,16 +711,16 @@
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="logo_footer" alt="">
                 </div>
                 <div class="p14_80_footer">
-                  <div class="p14_footer_text secondary-color option2-text-color">
+                  <div class="p14_footer_text primary-color option1-text-color">
                     A Powerful Headline Goes Right Here.
                   </div>
-                  <div class="p14_footer_text_second secondary-color option2-text-color">
+                  <div class="p14_footer_text_second primary-color option1-text-color">
                     A Strong Supporting Subheadline Goes Here
                   </div>
                 </div>
               </div>
               <div class="p14_footer_body_20 primary-color">
-                <button type="button" name="button" class="p14_button secondary-color option2-text-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button primary-color option1-bg-color">Call to Action</button>
               </div>
             </div>
           </div>
@@ -749,7 +756,7 @@
             <div class="p14_bg_body secondary-gradient">
               <div class="p14_body_body">
                 <img src="image/ads/body.jpg" class="body_img" alt="">
-                <div class="p14_body_text primary-color option1-text-color">
+                <div class="p14_body_text secondary-color option2-bg-color">
                   A Powerful Headline Goes Right Here.
                 </div>
               </div>
@@ -763,7 +770,7 @@
                       A Strong Supporting
                       Subheadline Goes Here.
                     </span>
-                    <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+                    <button type="button" name="button" class="p14_button secondary-color option2-bg-color">Call to Action</button>
                   </div>
                 </div>
               </div>
@@ -778,7 +785,7 @@
                   A Strong Supporting
                   Subheadline Goes Here.
                 </span>
-                <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button secondary-color option2-bg-color">Call to Action</button>
               </div>
             </div>
             <div class="p14_bg_footer secondary-gradient">
@@ -788,16 +795,16 @@
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_footer" alt="">
                 </div>
                 <div class="p14_80_footer">
-                  <div class="p14_footer_text primary-color option1-text-color">
+                  <div class="p14_footer_text secondary-color option2-text-color">
                     A Powerful Headline Goes Right Here.
                   </div>
-                  <div class="p14_footer_text_second primary-color option1-text-color">
+                  <div class="p14_footer_text_second secondary-color option2-text-color">
                     A Strong Supporting Subheadline Goes Here
                   </div>
                 </div>
               </div>
               <div class="p14_footer_body_20 secondary-color">
-                <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+                <button type="button" name="button" class="p14_button secondary-color option2-bg-color">Call to Action</button>
               </div>
             </div>
           </div>
@@ -964,7 +971,7 @@
           </div>
           <div class="p18_cover_silder p18_facebook">
             <img src="image/social-media/facebook.png" class="p18_facebook_bg" alt="">
-            <div class="p18_facebook_logo primary-color">
+            <div class="p18_facebook_logo secondary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
           </div>
@@ -1003,7 +1010,7 @@
           </div>
           <div class="p18_cover_silder p18_twitter">
             <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
-            <div class="p18_twitter_dp_logo primary-color">
+            <div class="p18_twitter_dp_logo secondary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
             <!-- <div class="p18_twitter_logo primary-color">
@@ -1117,7 +1124,7 @@
           <p class="p18_silder_heading primary-text-color">Instagram</p>
           <div class="p18_cover_silder p18_instagram">
             <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
-            <div class="p18_instagram_logo primary-color">
+            <div class="p18_instagram_logo secondary-color">
                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
             </div>
           </div>
