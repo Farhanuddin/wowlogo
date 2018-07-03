@@ -175,6 +175,9 @@
       .primary-gradient{
         background: linear-gradient(<?php echo isset($logo_result['primary_bg_color']) ? $logo_result['primary_bg_color'] : '#fff'; ?>, #fff);
       }
+      .secondary-gradient{
+        background: linear-gradient(<?php echo isset($logo_result['secondary_bg_color']) ? $logo_result['secondary_bg_color'] : '#fff'; ?>, #fff);
+      }
       .option1-color{
         background: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#1d1e1f'; ?>;
         color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?>;
@@ -193,8 +196,11 @@
         color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#b9beda'; ?> !important;
       }
 
-      .p14_body_80 span, .p14_nav_bottom span{
+      .p14_body_80 .option1-text-color span, .p14_nav_bottom.option1-text-color span{
         color: <?php echo isset($logo_result['option1_bg_color']) ? $logo_result['option1_bg_color'] : '#737070'; ?> !important;
+      }
+      .p14_body_80 .option2-text-color span, .p14_nav_bottom.option2-text-color span{
+        color: <?php echo isset($logo_result['option2_bg_color']) ? $logo_result['option2_bg_color'] : '#737070'; ?> !important;
       }
 
     </style>
@@ -441,7 +447,7 @@
         <div class="page_detail_nav_boby">
 
           <p class="p11_silder_heading primary-text-color">Brand Colors</p>
-          
+
           <!-- Cover Silde -->
           <div class="p9_cover_silder">
 
@@ -716,6 +722,90 @@
     </div>
     <!-- page 14 end -->
 
+    <!-- page 14 start -->
+    <div class="page page_detail" id="page14">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Display <br>Ad Design
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for display ads.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+          <p class="p14_silder_heading primary-text-color">Ad Examples</p>
+          <div class="p14_cover_silder">
+            <div class="p14_bg_body secondary-gradient">
+              <div class="p14_body_body">
+                <img src="image/ads/body.jpg" class="body_img" alt="">
+                <div class="p14_body_text primary-color option1-text-color">
+                  A Powerful Headline Goes Right Here.
+                </div>
+              </div>
+              <div class="p14_image_absolute secondary-color">
+                <div class="p14_body_30">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_body_body" alt="">
+                </div>
+                <div class="p14_body_80">
+                  <div class="p14_body_bottom_heading option2-text-color">
+                    <span>
+                      A Strong Supporting
+                      Subheadline Goes Here.
+                    </span>
+                    <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p14_bg_nav secondary-gradient">
+              <img src="image/ads/nav.jpg" class="nav_img" alt="">
+              <div class="logo_nav">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>"  alt="">
+              </div>
+              <div class="p14_image_absolute secondary-color p14_nav_bottom option2-text-color">
+                <span>
+                  A Strong Supporting
+                  Subheadline Goes Here.
+                </span>
+                <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+              </div>
+            </div>
+            <div class="p14_bg_footer secondary-gradient">
+              <div class="p14_footer_body">
+                <img src="image/ads/footer.jpg" class="footer_img" alt="" style="display: block !important;">
+                <div class="p14_20_footer">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="logo_footer" alt="">
+                </div>
+                <div class="p14_80_footer">
+                  <div class="p14_footer_text primary-color option1-text-color">
+                    A Powerful Headline Goes Right Here.
+                  </div>
+                  <div class="p14_footer_text_second primary-color option1-text-color">
+                    A Strong Supporting Subheadline Goes Here
+                  </div>
+                </div>
+              </div>
+              <div class="p14_footer_body_20 secondary-color">
+                <button type="button" name="button" class="p14_button primary-color option1-text-color">Call to Action</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page 14 end -->
+
     <!-- page 15 start -->
     <div class="page primary-color" id="page15">
       <h1 class="f_brand_name">06.</h1>
@@ -780,13 +870,54 @@
                 this in error, please notify us immediately by return email and promptly delete this message and its attachments from your system.
               </p>
             </div>
-            <div class="p16_detail_text_bottom primary-text-color">
+            <!-- <div class="p16_detail_text_bottom primary-text-color">
               <p>
                 Because most e-mail clients currently do not offer support for CSS3 custom font embedding, <br>
                 Arial is acceptable for use in e-mail signatures.
               </p>
+            </div> -->
+          </div>
+
+
+          <div class="p16_body_profile">
+            <div class="p16_border_bottom">
+              <p class="p16_email_heading primary-text-color">E-Mail Signature Example</p>
+              <div class="p16_profile">
+                <div class="p16_profile_image">
+                  <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" alt="">
+                </div>
+                <div class="p16_profile_text">
+                  <p class="p16_name primary-text-color">Jone Smith | Job Title</p>
+                  <p class="p16_email primary-text-color">Jone@sharestates.com</p>
+                  <p class="p16_contact primary-text-color">1-212-201-0705</p>
+                  <p class="p16_address primary-text-color">11 Middle Neck Road</p>
+                  <p class="p16_subaddress primary-text-color">Suite 400A, Great Neck, NY 11021</p>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="p16_body_bottom">
+            <div class="p16_website primary-text-color">
+              <span>website.com</span>
+              <img src="image/e-mail/linkedin_logo.png" alt="">
+              <img src="image/e-mail/twitter_logo.png" alt="">
+              <img src="image/e-mail/facebook_logo.png" alt="">
+            </div>
+            <div class="p16_detail_text primary-text-color">
+              <p>
+                CONFIDENTIALITY NOTICE: This email and any attachments are for the exclusive and confidential use of the intended recipient. If
+                you are not the intended recipient, please do not read, distribute or take action in reliance upon this message. If you have received
+                this in error, please notify us immediately by return email and promptly delete this message and its attachments from your system.
+              </p>
+            </div>
+            <!-- <div class="p16_detail_text_bottom primary-text-color">
+              <p>
+                Because most e-mail clients currently do not offer support for CSS3 custom font embedding, <br>
+                Arial is acceptable for use in e-mail signatures.
+              </p>
+            </div> -->
+          </div>
+
         </div>
       </div>
     </div>
@@ -824,27 +955,60 @@
           </div>
         </div>
         <div class="page_detail_nav_boby">
-
           <p class="p18_silder_heading primary-text-color">Facebook</p>
           <div class="p18_cover_silder p18_facebook">
             <img src="image/social-media/facebook.png" class="p18_facebook_bg" alt="">
             <div class="p18_facebook_logo primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
             </div>
-            <div class="p18_facebook_cover_logo primary-color">
+          </div>
+          <div class="p18_cover_silder p18_facebook">
+            <img src="image/social-media/facebook.png" class="p18_facebook_bg" alt="">
+            <div class="p18_facebook_logo primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
             </div>
           </div>
-
+        </div>
+      </div>
+    </div>
+    <!-- page 18 end -->
+    <!-- page 18 start -->
+    <div class="page page_detail" id="page18">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Social Media Profiles
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Social Media account.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
           <p class="p18_silder_heading primary-text-color">Twitter</p>
           <div class="p18_cover_silder p18_twitter">
             <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
-            <div class="p18_twitter_logo primary-color">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
-            </div>
             <div class="p18_twitter_dp_logo primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" class="">
             </div>
+          </div>
+          <div class="p18_cover_silder p18_twitter">
+            <img src="image/social-media/twitter.png" class="p18_twitter_bg" alt="">
+            <div class="p18_twitter_dp_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
+            </div>
+            <!-- <div class="p18_twitter_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" class="">
+            </div> -->
           </div>
 
         </div>
@@ -891,7 +1055,7 @@
     </div> -->
     <!-- page 18 end -->
 
-      <!-- page 18 Second Page start -->
+    <!-- page 18 Second Page start -->
     <div class="page page_detail" id="page18_3">
       <div class="page_detail_top_heading">
         <span class="page_detail_logo_image">
@@ -926,6 +1090,43 @@
       </div>
     </div>
     <!-- page 18 end -->
+
+    <!-- page 18 Second Page start -->
+    <div class="page page_detail" id="page18_3">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Social Media Profiles
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Social Media account.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+
+          <p class="p18_silder_heading primary-text-color">Instagram</p>
+          <div class="p18_cover_silder p18_instagram">
+            <img src="image/social-media/instagram.png" class="p18_instagram_bg" alt="">
+            <div class="p18_instagram_logo primary-color">
+               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- page 18 end -->
+
 
     <!-- page 19 start -->
     <div class="page primary-color" id="page19">
@@ -969,6 +1170,43 @@
               </div>
             </div>
           </div>
+          <br>
+          <div class="p20_cover_silder card">
+            <div class="p20_left">
+              <img src="image/stationary/card.png" class="card_img" alt="">
+              <div class="p20_card_logo primary-color">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- page 20 end -->
+
+    <!-- page 20 start -->
+    <div class="page page_detail" id="page20">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Stationary Designs
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Stationary Designs.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
 
           <p class="p20_silder_heading primary-text-color">Envelope</p>
           <div class="p20_cover_silder envelope">
@@ -977,7 +1215,13 @@
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
-
+          <br>
+          <div class="p20_cover_silder envelope">
+            <img src="image/stationary/envelope.png" class="envelope_img" alt="">
+            <div class="p20_envelope_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1010,6 +1254,39 @@
             <img src="image/stationary/letterhead.png" class="letter_img" alt="">
             <div class="p21_logo primary-color">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page 21 end -->
+    <!-- page 21 start -->
+    <div class="page page_detail" id="page21">
+      <div class="page_detail_top_heading">
+        <span class="page_detail_logo_image">
+          <img src="image/main-logo/logo.png">
+        </span>
+        <span class="page_detail_brand_identity primary-text-color">
+          <p>Brand Identity Standards</p>
+        </span>
+      </div>
+      <div class="border-line"></div>
+      <div class="page_detail_body">
+        <div class="page_detail_nav">
+          <div class="page_detail_nav_border"></div>
+          <div class="primary-text-color page_detail_presentation_design">
+            Stationary Designs
+          </div>
+          <div class="primary-text-color page_detail_presentation_design_detail">
+            The following are examples of best brand practices for Stationary Designs.
+          </div>
+        </div>
+        <div class="page_detail_nav_boby">
+          <p class="p21_silder_heading primary-text-color">Letterhead</p>
+          <div class="p21_cover_silder letter">
+            <img src="image/stationary/letterhead.png" class="letter_img" alt="">
+            <div class="p21_logo primary-color">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
             </div>
           </div>
         </div>
@@ -1057,6 +1334,13 @@
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
+          <div class="p23_s_cover_silder vehicle">
+            <img src="image/merchandise/vehicle.png" class="vehicle_img" alt="">
+            <div class="vehicle_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
+          </div>
+
 
         </div>
       </div>
@@ -1093,6 +1377,12 @@
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
             </div>
           </div>
+          <div class="p23_s_cover_silder mug">
+            <img src="image/merchandise/mug.png" class="mug_img" alt="">
+            <div class="mug_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+            </div>
+          </div>
 
         </div>
       </div>
@@ -1124,10 +1414,19 @@
 
           <p class="p23_s_silder_heading primary-text-color">TSHIRTS</p>
           <div class="p23_s_cover_silder tshirt">
-            <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
-            <div class="tshirt_logo">
-              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            <div class="p23_left">
+              <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
+              <div class="tshirt_logo">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+              </div>
             </div>
+            <div class="p23_right">
+              <img src="image/merchandise/tshirt.png" class="tshirt_img" alt="">
+              <div class="tshirt_logo">
+                <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
+              </div>
+            </div>
+
           </div>
 
         </div>
@@ -1163,6 +1462,12 @@
             <img src="image/merchandise/cap.png" class="cap_img" alt="">
             <div class="cap_logo">
               <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>">
+            </div>
+          </div>
+          <div class="p23_s_cover_silder cap">
+            <img src="image/merchandise/cap.png" class="cap_img" alt="">
+            <div class="cap_logo">
+              <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>">
             </div>
           </div>
 

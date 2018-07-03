@@ -670,7 +670,7 @@ img.logo_body_body {
 }
 .p16_profile_image {
     float: left;
-    width: 120px;
+    width: 150px;
     height: 108px;
     display: flex;
     flex-flow: column;
@@ -906,31 +906,35 @@ img.logo_body_body {
 
 /*css page 20 Start*/
 .p20_silder_heading {
-    padding-left: 25px;
-    font-size: 15px;
+    font-size: 22px;
+    text-align: center;
     font-weight: 600;
     color: #0e1438;
 }
 .p20_cover_silder {
     position: relative;
-    padding-left: 25px;
-    width: 278px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align:  center;
 }
 .p20_cover_silder.card .card_img {
-    max-height: 200px;
-    max-width: 278px;
+      height: auto;
+      width: 400px;
 }
 .p20_cover_silder.envelope .envelope_img {
-    max-height: 260px;
     width: auto;
+    height: 250px;
 }
 .p20_card_logo {
     background: transparent !important;
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 120px;
+    width: 120px;
     top: 12%;
-    right: 45px;
+    right: 8%;
     text-align: center;
     border-radius: 50%;
     display: flex;
@@ -939,17 +943,17 @@ img.logo_body_body {
     align-items: center;
 }
 .p20_card_logo img {
-    max-width: 69px;
-    max-height: 50px;
+    max-width: 90px;
+    max-height: 65px;
 }
 .p20_envelope_logo {
     background: transparent !important;
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 110px;
+    width: 150px;
     top: 12%;
     text-align: center;
-    left: 18%;
+    left: 22%;
     border-radius: 50%;
     display: flex;
     flex-flow: column;
@@ -957,11 +961,14 @@ img.logo_body_body {
     align-items: center;
 }
 .p20_envelope_logo img {
-    max-width: 90px;
-    max-height: 65px;
+    max-width: 150px;
+    max-height: 108px;
 }
 .p20_left{
 
+position: relative;
+
+width: 400px;
 }
 /*css page 20 end*/
 
@@ -969,22 +976,671 @@ img.logo_body_body {
 
 /*css page 21 Start*/
 .p21_silder_heading {
-    padding-left: 25px;
-    font-size: 15px;
+    font-size: 22px;
+    text-align:  center;
     font-weight: 600;
     color: #0e1438;
 }
 .p21_cover_silder {
     position: relative;
-    float: left;
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 .p21_cover_silder.letter .letter_img {
-    max-height: 500px;
+    height: 500px;
     width: auto;
 }
 .p21_logo {
+    background: transparent !important;
+    position: absolute;
+    height: 108px;
+    width: 150px;
+    top: 5%;
+    text-align: center;
+    left: 25%;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.p21_logo img {
+    max-width: 150px;
+    max-height: 108px;
+@font-face {
+    font-family: 'Arial-regular';
+    src: url('font_text/Arial-regular.ttf');  }  @font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('font_text/ProximaNova-Bold.otf');  }  @font-face {
+    font-family: 'ProximaNova-Light';
+    src: url('font_text/ProximaNova-Light.ttf');  }  @font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url('font_text/ProximaNova-Regular.ttf');  }  @font-face {
+    font-family: 'ProximaNova-Semibold';
+    src: url('font_text/ProximaNova-Semibold.ttf');  }
+    body{    background: #9e9e9e;  }  *{
+    font-family: 'ProximaNova-Bold';  }    .logout{
+    position: absolute;
+    top: 15px;
+    right: 20px;  }  .logout>.btn{
+    padding: 5px 11px;
+    background-color: #fcab0e;
+    border-color: #fcab0e;  }    .logout>.btn:hover, .logout>.btn:focus, .logout>.btn-:active{
+    padding: 5px 11px;
+    background-color: #fcab0e;
+    border-color: #fcab0e;  }  /*css page heading start*/  .s_brand_name {
+    font-family: 'ProximaNova-Bold';
+    text-align: left;
+    padding-bottom: 17%;
+    font-size: 80px;
+    padding-left: 30px;
+    line-height: 35px;  }  .s_logo_image {
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    bottom: 0;  }  .s_logo_image
+    img {      margin-right: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 264px;
+    max-height: 190px;  }
+    h1.f_brand_name {      padding-top: 20%;
+    font-family: 'ProximaNova-Light';
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 80px;
+    padding-left: 30px;  }  /*css page heading end*/      /*css page 1 start*/  .p11_background_title, .p11_background_subtitle, .p11_box_title{
+    color: #000 !important;  }  .page {
+    margin: auto;
+    max-width: 1024px;
+    height: 768px;
+    width: 100%;
+    position: relative;  }  #page1{
+    background: #fff !important;  }  #page2, #page6, #page8, #page10, #page13, #page15, #page17, #page19, #page22 {
+    background: #fff !important;
+    color: #000 !important;  }  .p1_brand_name {
+    font-family: 'ProximaNova-Bold';
+    text-align: center;
+    padding-top: 30%;
+    margin-bottom: 20px;
+    font-size: 80px;
+    padding-bottom: 0;  }  .p1_logo_image {
+    text-align: center;
+    padding-bottom: 15%;  }  .p1_logo_image
+    img {      max-width: 250px;
+    max-height: 180px;  }  /*css page 1 end*/    /*css page 3 start*/  .p3_primary{
+    padding-left: 85px !important;
+    padding-top: 40px;  }  .p3_silder_heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(48, 51, 77);  }  .p3_cover_silder_logo {
+    text-align: center;  }  .p3_cover_silder_logo
+    img {      max-width: 250px;
+    max-height: 180px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p3_main_logo {
+    padding: 40px 85px 0 85px;  }  .p3_nav_boby_left {
+    width: 50%;
+    float: left;
+    padding: 15px 0px;  }  .p3_logo
+    img {      margin-top: 10px;
+    max-width: 160px;
+    max-height: 115px;  }  .p3_logo {
+    text-align: center;  }  /*css page 3 end*/    /*css page 4 end*/  .p4_primary{
+    padding-left: 85px !important;
+    padding-top: 25px;  }  .p4_primary_end {
+    padding-left: 85px !important;
+    padding-top: 25px;
+    margin-top: 160px;  }  /*css page 4 end*/    /*css page 5 start*/  .p5_silder_heading {
+    font-size: 16px;
+    font-weight: 600;  }  .p5_bg_row {
+    padding: 25px 25px 25px 25px;  }  .p5_bg_col {
+    float: left;
+    width: 50%;  }  .p5_cover_silder_logo {
+    text-align: center;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p5_row{
+    margin-top: 260px;  }  .p5_cover_silder_logo
+    img {      max-height: 122px;
+    max-width: 170px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  /*css page 5 end*/      /*css page 7 start*/
+    h3.f_letter {      font-size: 80px;
+    line-height: 0px;
+    font-weight: 100;  }
+    p.capital_letter {      padding-top: 73px;
+    padding-left: 17px;
+    font-size: 17px;  }
+    p.small_letter {      padding-left: 17px;
+    font-size: 17px;
+    line-height: 0px;  }
+    p.numeric_letter {      padding-left: 17px;
+    font-size: 17px;
+    line-height: 20px;  }  .p7_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 12px;  }  .p7_silder_heading {
+    font-size: 15px;
+    font-weight: 600;  }  /*css page 7 end*/      /*css page 9 start*/  .p9_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 141px;  }  .box_left {
+    float: left;  }  .p9_logo_div_image {
+    text-align: center;
+    padding-top: 134px;  }  .p9_color_codes
+    b{    color: #767678;  }  .p9_color_codes {
+    border: 2px solid rgb(245, 245, 245);
+    margin-top: -23px;  }  .p9_color_codes
+    p {      padding-left: 30px;  }  .p9_color_codes
+    span {      padding-left: 26px;
+    font-weight: 600;  }  .p9_content {
+    float: left;
+    padding: 0px 25px;  }  .box_right {
+    float: right;  }  .p9_cover_silder_logo {
+    position: relative;
+    width: 260px;
+    height: 112px;
+    float: left;
+    margin-right: 25px;  }    .p9_content
+    p {      font-family: 'ProximaNova-Regular';
+    font-weight: 600;
+    font-size: 13px;
+    margin: 9px 0;  }  /*css page 9 end*/      /*css page 11 start*/  .p11_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;  }  .p11_cover_silder {
+    position: relative;
+    float: left;
+    padding: 0px 50px;
+    margin-bottom: 12px;
+    width: 86%;  }  .p11_margin_0{
+    margin: 0;  }  .p11_cover_silder_logo {
+    border: 1px solid;
+    border-color: #a2a2a2 !important;
+    position: relative;
+    width: 49%;
+    height: 170px;
+    float: left;
+    margin-right: 3px;  }  .p11_margin_right.p11_margin_right{
+    margin-right: 0px;  }  .p11_vertical{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p11_logo_img {
+    border: 1px solid;
+    border-color: #a2a2a2 !important;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p11_cover_silder_logo
+    img {      max-height: 75px;
+    max-width: 104px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p11_box_title {
+    font-family: 'ProximaNova-Light';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;  }  .p11_logo_background_image {
+    padding: 10px;  }  .p11_logo_background_image
+    img {      max-width: 42px;
+    max-height: 30px;  }  .p11_background_title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;  }  .p11_background_subtitle {
+    font-family: 'ProximaNova-Light';
+    text-align: center;
+    font-size: 12px;
+    margin: 8px;  }  /*css page 11 end*/      /*css page 12 start*/  .p12_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;  }  .p12_cover_silder {
+    padding: 0px 50px;  }  .p12_cover_silder_logo {
+    position: relative;
+    width: 49%;
+    height: 170px;
+    float: left;
+    margin-top: 4px;
+    margin-right: 3px;
+    border: 1px solid #ccc;    }  .p12_sub_nav {
+    float: left;
+    width: 30%;
+    height: 170px;  }  .p12_logo_background_image{
+    padding: 10px;  }  .p12_logo_background_image
+    img {      height: auto;
+    width: 100%;  }  .p12_sub_body {
+    float: left;
+    width: 70%;  }  .p12_sub_body
+    p {      padding: 15px 15px;
+    color: #0e1438;
+    font-weight: 600;
+    font-size: 15px;  }  /*css page 12 end*/        /*css page 14 start*/  .p14_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;  }  .p14_cover_silder {
+    width: 93%;
+    margin: 25px;  }  .p14_bg_body {
+    position: relative;
+    width: 66%;
+    height: 335px;
+    float: left;  }  .p14_bg_nav {
+    position: relative;
+    float: left;
+    height: 335px;
+    margin-left: 5%;
+    width: 25.1%;  }  .p14_bg_body .body_img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;  }  .p14_bg_nav .nav_img {
+    width: 100%;
+    height: 75%;
+    opacity: 0.5;  }  .p14_bg_footer{
+    position: relative;
+    width: 96%;
+    float: left;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: left;  }  .p14_bg_footer .footer_img{
+    text-align:  left;
+    width: 100%;
+    opacity: 0.5;  }  .logo_body {
+    height: 77px;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .logo_body
+    img{      max-width: 56px;
+    max-height: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .logo_nav {
+    position: absolute;
+    width: auto;
+    height: 107px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    text-align: center;  }  .logo_nav
+    img {      max-width: 95px;
+    max-height: 68px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }
+    img.logo_footer {      max-height: 53px;
+    max-width: 74px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p14_image_absolute{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;  }    .p14_body_body {
+    position:  relative;
+    width: 100%;
+    height: 75%;  }  .p14_body_text{
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    font-weight:  600;
+    width: 42%;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    font-size: 25px;
+    color: #fff !important;
+    text-shadow: 1px 1px #6060609c;
+    padding: 12px 20px;
+    background: #000;  }
+    img.logo_body_body {    max-height: 53px;
+    max-width: 74px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p14_body_30{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p14_body_80{
+    position: absolute;
+    width: 70%;
+    padding-left: 10px;
+    height: 100%;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p14_body_80
+    span {    font-size: 13px;
+    width: 50%;
+    font-family: ProximaNova-Regular;
+    display: inline-flex;
+    color: #fff !important;
+    text-shadow: 1px 1px #6060609c;  }  .p14_button{
+    border: 0;
+    border-radius: 5px;
+    padding: 7px 10px;
+    margin-left: 10px;
+    color: #fff !important;
+    border-color: transparent;  }  .p14_body_bottom_heading{
+    padding: 12px 0px 12px 18px;
+    border-left: 2px solid #0d6e7b;  }  .p14_nav_bottom{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align:  center;  }  .p14_nav_bottom
+    span{    text-align:  center;
+    font-size: 13px;
+    width: 100%;
+    font-family: ProximaNova-Regular;
+    display: inline-flex;
+    color: #fff !important;
+    padding-bottom: 6px;
+    text-shadow: 1px 1px #6060609c;  }  .p14_footer_body{
+    text-align: left;
+    width: 75%;  }  .p14_footer_text {
+    margin-bottom: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff !important;
+    text-shadow: 1px 1px #6060609c;
+    padding: 6px 10px;  }  .p14_20_footer {
+    position: absolute;
+    width: 20%;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p14_80_footer {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 20%;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;  }  .p14_footer_text_second{
+    margin-top: 3px;
+    font-size: 11px;
+    padding: 6px 10px;
+    font-family: ProximaNova-Regular;
+    color: #fff !important;
+    text-shadow: 1px 1px #6060609c;  }  .p14_footer_body_20 {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    right: 0;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  /*css page 14 end*/        /*css page 16 start*/  .p16_body_profile {
+    padding: 0 25px;
+    float: left;
+    width: 93%;
+    padding-bottom: 20px;  }  .p16_email_heading {
+    font-weight: 600;  }  .p16_profile_image {
+    float: left;
+    width: 150px;
+    height: 108px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;  }  .p16_profile_text {
+    padding-left: 15px;
+    float: left;  }  .p16_profile_text .p16_name{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 0;  }  .p16_profile_text .p16_email {
+    font-family: 'ProximaNova-Regular';
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 500;  }  .p16_profile_text .p16_contact {
+    font-family: 'ProximaNova-Regular';
+    margin: 6px 0;
+    font-size: 15px;  }  .p16_profile_text .p16_address{
+    font-family: 'ProximaNova-Regular';
+    margin: 6px 0;
+    font-size: 15px;  }  .p16_profile_text .p16_subaddress{
+    font-family: 'ProximaNova-Regular';
+    margin: 6px 0;
+    font-size: 15px;  }  .p16_profile_image
+    img {      max-width: 150px;
+    max-height: 108px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p16_border_bottom {
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0e1438;  }  .p16_website
+    img {      height: 20px;
+    width: 20px;  }  .p16_website
+    span {      font-size: 16px;
+    font-weight: 600;
+    padding-left: 25px;  }  .p16_detail_text {
+    padding: 0px 25px;  }  .p16_detail_text
+    p {      font-family: 'ProximaNova-Regular';
+    font-size: 12px;
+    font-weight: 600;  }  .p16_detail_text_bottom
+    p {      font-size: 15px;  }  .p16_detail_text_bottom {
+    position: absolute;
+    bottom: 50px;
+    padding: 0 25px;  }  /*css page 16 end*/      /*css page 18 start*/  .p18_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;  }  .p18_cover_silder {
+    position: relative;
+    width: 93%;
+    margin-bottom: 30px;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;  }  .p18_col_60 {
+    float: left;
+    display: inline;
+    width: 60%;  }  .p18_col_40 {
+    float: left;
+    display: inline;
+    width: 40%;  }  .p18_facebook .p18_facebook_bg {
+    width: 100%;
+    height:  auto;  }  .p18_twitter .p18_twitter_bg {
+    width: 100%;
+    height: auto;  }  .p18_instagram .p18_instagram_bg {
+    width: auto;
+    height: 450px;  }  .p18_facebook_logo {
+    background: #fff !important;
+    border-color: #fff !important;
+    position: absolute;
+    top: 17%;
+    left: 11.2%;
+    width: 88px;
+    border: 1px solid;
+    height: 80px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_facebook_logo
+    img{      max-width: 80px;
+    max-height: 64px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }    .p18_facebook_cover_logo {
+    position: absolute;
+    background: transparent !important;
+    top: 13%;
+    height: 168px;
+    width: 498px;
+    text-align: center;
+    left: 190px;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_facebook_cover_logo
+    img {      display: none;
+    max-width: 125px;
+    max-height: 90px;
+    /* display: flex; */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_twitter_logo {
+    background: transparent !important;
+    position: absolute;
+    top: 9%;
+    height: 170px;
+    left: 25px;
+    width: 93%;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_twitter_logo
+    img {      display:  none;
+    max-width: 140px;
+    max-height: 101px;
+    /* display: flex; */
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_twitter_dp_logo {
+    background: #fff !important;
+    border: 2px solid #ededed !important;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: 55%;
+    left: 21%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_twitter_dp_logo
+    img {      max-width: 69px;
+    max-height: 54px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_instagram_logo {
+    background: transparent !important;
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: 15%;
+    left: 3%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p18_instagram_logo
+    img {      max-width: 100px;
+    max-height: 72px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  /*css page 18 end*/        /*css page 20 Start*/  .p20_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;  }  .p20_cover_silder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align:  center;  }  .p20_cover_silder.card .card_img {
+    height: auto;
+    width: 400px;  }  .p20_cover_silder.envelope .envelope_img {
+    width: auto;
+    height: 250px;  }  .p20_card_logo {
+    background: transparent !important;
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 12%;
+    right: 8%;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p20_card_logo
+    img {      max-width: 90px;
+    max-height: 65px;  }  .p20_envelope_logo {
+    background: transparent !important;
+    position: absolute;
+    height: 110px;
+    width: 150px;
+    top: 12%;
+    text-align: center;
+    left: 22%;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .p20_envelope_logo
+    img {      max-width: 150px;
+    max-height: 108px;  }  .p20_left{
+    position: relative;
+    width: 400px;  }  /*css page 20 end*/        /*css page 21 Start*/  .p21_silder_heading {
+    padding-left: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0e1438;  }  .p21_cover_silder {
+    position: relative;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;  }  .p21_cover_silder.letter .letter_img {
+    max-height: 500px;
+    width: auto;  }  .p21_logo {
     background: transparent !important;
     position: absolute;
     height: 80px;
@@ -996,11 +1652,218 @@ img.logo_body_body {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;  }  .p21_logo
+    img {      max-width: 83px;
+    max-height: 60px;  }  /*css page 21 end*/        /*css page 23 Start*/  .border-line {
+    width: 100%;
+    height: 5px;
+    background: black;  }  .page_detail {
+    background: #fff !important;
+    border-bottom: 20px solid;
+    border-color: black;  }  .page_detail_top_heading {
+    position: relative;
+    height: 102px;
+    background: #fff;
+    margin-top: 20px;  }  .page_detail_logo_image {
+    width: 50%;
+    display: inline;
+    float: left;  }  .page_detail_logo_image
+    img {      position: absolute;
+    bottom: 15%;
+    padding-left: 30px;
+    max-height: 53px;  }  .page_detail_brand_identity {
+    width: 50%;
+    display: inline;
+    float: right;  }  .page_detail_brand_identity
+    p {      position: absolute;
+    font-family: 'ProximaNova-Bold';
+    bottom: 0;
+    right: 0;
+    font-weight: 600;
+    font-size: 14px;
+    padding-right: 30px;  }    .page_detail_nav {
+    width: 30%;
+    height: 660px;
+    background: #efeeec;
+    float: left;
+    display: inline;  }  .page_detail_nav_boby {
+    position: relative;
+    background: #fff;
+    padding-top: 30px;
+    height: 631px;
+    width: 70%;
+    float: right;
+    display: inline;  }  .page_detail_nav_border {
+    height: 3px;
+    width: 70%;
+    margin-top: 50px;
+    background: black;  }  .page_detail_presentation_design {
+    font-family: 'ProximaNova-Bold';
+    padding-left: 40px;
+    font-size: 36px;
+    font-weight: 600;
+    padding-top: 20px;  }  .page_detail_presentation_design_detail {
+    font-family: 'ProximaNova-Regular';
+    padding-left: 40px;
+    padding-right: 70px;
+    font-size: 14px;
+    padding-top: 45px;  }    .p23_s_silder_heading {
+    font-size: 18px;
+    text-align:  center;
+    font-weight: 600;
+    color: #0e1438;  }  .p23_s_cover_silder_logo {
+    position: relative;
+    width: 470px;
+    height: 400px;
+    float: left;
+    margin: 3px;  }  .p23_s_cover_silder_logo_2 {
+    position: relative;
+    width: 175px;
+    height: 400px;
+    float: left;
+    margin: 3px;
+    margin-left: 20px;  }  .p23_s_logo_div_image {
+    text-align: center;
+    padding-top: 50px;  }  .p23_s_logo_div_image
+    img {      height: 60px;
+    width: auto;  }  .p23_s_box_title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;  }  .p23_s_logo_background_image {
+    position: absolute;
+    bottom: 4px;
+    padding: 8px 15px 8px 30px;
+    border-right: 1px solid #008aff;
+    margin-bottom: 10px;  }  .p23_s_logo_background_image
+    img {      height: 30px;
+    width: auto;  }  .p23_s_bottom {
+    position: absolute;
+    bottom: 0;  }  .p23_col_60 {
+    float: left;
+    display: inline;
+    width: 60%;  }  .p23_col_40 {
+    float: left;
+    display: inline;
+    width: 40%;  }  .p23_col_50 {
+    float: left;
+    display: inline;
+    width: 50%;  }  .p23_col_margin_both {
+    margin-top: 20px;
+    margin-bottom: 20px;  }  .p23_col_margin {
+    margin-top: 50px;  }  .p23_s_cover_silder {
+    padding: 20px;
+    position: relative;  }  .tshirt, .cap, .mug, .vehicle{
+    text-align: center;  }  .vehicle .vehicle_img {
+    width: 100%;
+    height: auto;  }  .mug .mug_img {
+    width: 50%;
+    height: auto;  }  .tshirt .tshirt_img {
+    width: 60%;
+    height: auto;  }  .cap .cap_img {
+    margin-top: 10%;
+    width: 40%;
+    height: auto;  }  .tshirt_logo {
+    top: 26%;
+    position: absolute;
+    text-align: center;
+    height: 120px;
+    width: 150px;
+    left: 39%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     align-items: center;
-}
-.p21_logo img {
-    max-width: 83px;
-    max-height: 60px;
+    right: 0;  }  .tshirt_logo
+    img {      opacity:  0.8;
+    max-width: 120px;
+    max-height: 86px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }    .cap_logo {
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    width: 150px;
+    top: 36%;
+    right: 0;
+    left: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .cap_logo
+    img {      opacity:  0.8;
+    max-width: 139px;
+    max-height: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }    .mug_logo {
+    position: absolute;
+    text-align: center;
+    height: 160px;
+    width: 160px;
+    left: 34%;
+    top: 28%;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .mug_logo
+    img {      max-width: 160px;
+    max-height: 115px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;  }    .vehicle_logo {
+    position: absolute;
+    text-align: center;
+    height: 150px;
+    width: 340px;
+    top: 54px;
+    right: 0;
+    left: 78px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  .vehicle_logo
+    img {      opacity: 0.8;
+    max-width: 180px;
+    max-height: 140px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }  /*css page 23 end*/            /* form Css */  .form_body {
+    background: #fff;  }  .form_main {
+    width: 100%;  }  .form_main
+    h4 {      font-family: roboto;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-transform: uppercase;  }  .heading {
+    border-bottom: 1px solid #fcab0e;
+    padding-bottom: 9px;
+    position: relative;  }  .heading
+    span {      background: #9e6600 none repeat scroll 0 0;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 120px;  }  .form-group {
+    height: 35px;  }
+    button.btn.btn-default {      width: 100%;  }  .size_fix{
+    height: 159px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;  }
 }
 /*css page 21 end*/
 
@@ -1087,7 +1950,7 @@ img.logo_body_body {
 }
 
 .p23_s_silder_heading {
-    font-size: 18px;
+    font-size: 25px;
     text-align:  center;
     font-weight: 600;
     color: #0e1438;
@@ -1170,19 +2033,18 @@ img.logo_body_body {
   text-align: center;
 }
 .vehicle .vehicle_img {
-    width: 100%;
+    width: 75%;
     height: auto;
 }
 .mug .mug_img {
-    width: 50%;
+    width: 35%;
     height: auto;
 }
 .tshirt .tshirt_img {
-    width: 60%;
+    width: 100%;
     height: auto;
 }
 .cap .cap_img {
-    margin-top: 10%;
     width: 40%;
     height: auto;
 }
@@ -1190,9 +2052,9 @@ img.logo_body_body {
     top: 26%;
     position: absolute;
     text-align: center;
-    height: 120px;
-    width: 150px;
-    left: 39%;
+    height: 110px;
+    width: 125px;
+    left: 30%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1201,8 +2063,8 @@ img.logo_body_body {
 }
 .tshirt_logo img {
     opacity:  0.8;
-    max-width: 120px;
-    max-height: 86px;
+    max-width: 110px;
+    max-height: 78px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1214,7 +2076,7 @@ img.logo_body_body {
     text-align: center;
     height: 100px;
     width: 150px;
-    top: 36%;
+    top: 22%;
     right: 0;
     left: 40%;
     display: flex;
@@ -1235,10 +2097,10 @@ img.logo_body_body {
 .mug_logo {
     position: absolute;
     text-align: center;
-    height: 160px;
-    width: 160px;
-    left: 34%;
-    top: 28%;
+    height: 130px;
+    width: 130px;
+    left: 37%;
+    top: 24%;
     right: 0;
     display: flex;
     flex-flow: column;
@@ -1246,8 +2108,8 @@ img.logo_body_body {
     align-items: center;
 }
 .mug_logo img {
-    max-width: 160px;
-    max-height: 115px;
+    max-width: 125px;
+    max-height: 112px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1258,11 +2120,11 @@ img.logo_body_body {
 .vehicle_logo {
     position: absolute;
     text-align: center;
-    height: 150px;
-    width: 340px;
-    top: 54px;
+    height: 112px;
+    width: 290px;
+    top: 50px;
     right: 0;
-    left: 78px;
+    left: 136px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1270,8 +2132,8 @@ img.logo_body_body {
 }
 .vehicle_logo img {
     opacity: 0.8;
-    max-width: 180px;
-    max-height: 140px;
+    max-width: 150px;
+    max-height: 108px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -1323,4 +2185,14 @@ button.btn.btn-default {
     flex-flow: column;
     justify-content: center;
     align-items: center;
+}
+.p23_left {
+    width: 50%;
+    float: left;
+    position: relative;
+}
+.p23_right {
+    width: 50%;
+    float: left;
+    position: relative;
 }
