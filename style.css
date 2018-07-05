@@ -97,12 +97,13 @@ h1.f_brand_name {
 .p1_brand_name {
     font-family: 'ProximaNova-Bold';
     text-align: center;
-    padding-top: 30%;
+    padding-top: 15%;
     margin-bottom: 20px;
     font-size: 80px;
     padding-bottom: 0;
 }
 .p1_logo_image {
+    padding-top: 15%;
     text-align: center;
     padding-bottom: 15%;
 }
@@ -669,12 +670,13 @@ img.logo_body_body {
 .p16_profile_image {
     float: left;
     width: 150px;
-    height: 108px;
+    height: 120px;
+    text-align:  center;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 .p16_profile_text {
     padding-left: 15px;

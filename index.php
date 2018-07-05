@@ -850,7 +850,7 @@
             <div class="p16_border_bottom">
               <p class="p16_email_heading primary-text-color">E-Mail Signature Example</p>
               <div class="p16_profile">
-                <div class="p16_profile_image">
+                <div class="p16_profile_image primary-color">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_file'] ?>" alt="">
                 </div>
                 <div class="p16_profile_text">
@@ -890,7 +890,7 @@
             <div class="p16_border_bottom">
               <p class="p16_email_heading primary-text-color">E-Mail Signature Example</p>
               <div class="p16_profile">
-                <div class="p16_profile_image">
+                <div class="p16_profile_image secondary-color">
                   <img src="image/bg-logo/<?php echo $logo_result['primary_logo_white'] ?>" alt="">
                 </div>
                 <div class="p16_profile_text">
